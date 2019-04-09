@@ -10,15 +10,81 @@ include include/header.pug
     .slide
       img(src="/dist/img/jpg/index/slider.jpg")
   img.poster(src="/dist/img/svg/index/poster.svg")
-  section.stocks
-    .head-stocks
-      p Акции и новинки
-      a Все акции
-        img(src="/dist/img/svg/index/all-stock.svg")
-      .zigzag-line
-    .body-stocks
-      .stock
-        .info
-          p.headline Пусть всегда будет LEGO!
-          p.text Что может быть лучше нового LEGO? Только мысль о том, что скоро вернетесь еще за одним. Как же не  | вернуться, если следующая покупка будет со скидкой 20%!
+  .container
+    section.stocks
+      .head-stocks
+        p Акции и новинки
+        a Все акции
+          img(src="/dist/img/svg/index/all-stock.svg")
+        .zigzag-line
+      .body-stocks
+        a.stock
+          .img
+            img(src="./dist/img/jpg/index/toys.jpg")
+            .logo
+              img(src="./dist/img/png/index/logo/LEGO.png")
+          .info
+            p.headline Пусть всегда будет LEGO!
+            p.text Что может быть лучше нового LEGO? <br> Только мысль о том, что скоро вернетесь еще за одним. Как же не вернуться, если следующая покупка будет со скидкой 20%!
+            .date 
+              p 26 февраля – 8 марта
+        a.stock
+          .img
+            img(src="./dist/img/jpg/index/yves-woman.jpg")
+            .logo
+              img(src="./dist/img/png/index/logo/yves-rocher.png")
+          .info
+            p.headline Пусть расцветает <br> красота!
+            .date
+              p 26 февраля – 8 марта
+        a.stock
+          .img
+            img(src="./dist/img/jpg/index/3-15clock.jpg")
+            .logo
+              img(src="./dist/img/png/index/logo/3-15.png")
+          .info
+            p.headline В салоне часов "3-15" скидка 20% на все модели швейцарского бренда Gryon до 10 марта.
+            .date 
+              p 26 февраля – 8 марта
+        a.stock
+          .img
+            img(src="./dist/img/jpg/index/moscow-yv.jpg")
+            .logo
+              img(src="./dist/img/png/index/logo/moscow-yv-logo.png")
+          .info
+            p.headline Украшения для любимых от Московского ювелирного завода!
+            .date 
+              p 26 февраля – 8 марта
+section.cinema
+  .container
+    .head-cinema
+      p Сейчас в кино
+      a Смотреть все
+        img(src="/dist/img/svg/index/all-stock-cinema.svg")
+    .background-text Сейчас в кино
+    #cinema-slider
+      .cinema-slide
+        img(src="./dist/img/jpg/index/aelita.jpg")
+      .cinema-slide
+        img(src="./dist/img/jpg/index/marvel.jpg")
+      .cinema-slide
+        img(src="./dist/img/jpg/index/zavod.jpg")
+      .cinema-slide
+        img(src="./dist/img/jpg/index/green-book.jpg")
+      .cinema-slide
+        img(src="./dist/img/jpg/index/mistresses.jpg")
+      .cinema-slide
+        img(src="./dist/img/jpg/index/humorist.jpg")
+      .cinema-slide
+        img(src="./dist/img/jpg/index/aelita.jpg")
+      .cinema-slide
+        img(src="./dist/img/jpg/index/marvel.jpg")
+      .cinema-slide
+        img(src="./dist/img/jpg/index/zavod.jpg")
+      .cinema-slide
+        img(src="./dist/img/jpg/index/green-book.jpg")
+      .cinema-slide
+        img(src="./dist/img/jpg/index/mistresses.jpg")
+      .cinema-slide
+        img(src="./dist/img/jpg/index/humorist.jpg")
 include include/footer.pug

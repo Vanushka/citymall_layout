@@ -38,7 +38,6 @@ header .container {
   margin: 0 auto;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 25px;
   max-width: 1920px;
   min-width: 1170px;
   -ms-flex-align: center;
@@ -269,6 +268,10 @@ header .container .search-and-burger .menu-icon.clicked .dot:nth-of-type(9) {
 .container #main-slider {
   width: 100%;
   height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
   position: relative;
 }
 .container #main-slider .slide {
@@ -298,14 +301,23 @@ header .container .search-and-burger .menu-icon.clicked .dot:nth-of-type(9) {
   margin-left: 60px;
   position: relative;
 }
-.container .stocks {
-  width: 90%;
+.container .container {
+  width: 100%;
   margin: 0 auto;
-  height: 750px;
-  margin-top: 110px;
+  padding: 0 35px;
+  max-width: 1685px;
+  min-width: 1170px;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.container .container .stocks {
+  width: 100%;
+  margin: 0 auto;
+  height: 710px;
+  margin-top: -75px;
   position: relative;
 }
-.container .stocks .head-stocks {
+.container .container .stocks .head-stocks {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -313,43 +325,268 @@ header .container .search-and-burger .menu-icon.clicked .dot:nth-of-type(9) {
   -ms-flex-pack: justify;
       justify-content: space-between;
 }
-.container .stocks .head-stocks p {
+.container .container .stocks .head-stocks p {
   font-size: 32px;
   line-height: 61px;
   font-family: GothamPro-Medium;
 }
-.container .stocks .head-stocks a {
+.container .container .stocks .head-stocks a {
   display: -ms-flexbox;
   display: flex;
 }
-.container .stocks .head-stocks a img {
+.container .container .stocks .head-stocks a img {
   margin-left: 8px;
 }
-.container .stocks .head-stocks .zigzag-line {
+.container .container .stocks .head-stocks .zigzag-line {
   width: 100%;
   height: 7px;
   margin-top: 48px;
   position: absolute;
   background-image: url("../img/svg/index/zigzag-line.svg");
 }
-.container .stocks .body-stocks {
+.container .container .stocks .body-stocks {
   margin-top: 42px;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
-.container .stocks .body-stocks .stock:first-child() {
-  width: 832px;
-  height: 423px;
-}
-.container .stocks .body-stocks .stock .img .logo {
-  width: 71px;
-  height: 71px;
-}
-.container .stocks .body-stocks .stock .info {
-  width: 260px;
-  height: 423px;
+.container .container .stocks .body-stocks a.stock {
+  margin: 0 12px;
+  max-width: 260px;
+  max-height: 423px;
+  min-width: 160px;
+  cursor: pointer;
   border: 1px solid #dedede;
 }
-.container .stocks .body-stocks .stock .info p.text {
-  width: 218px;
-  margin: 0 auto;
+.container .container .stocks .body-stocks a.stock .img {
+  max-width: 260px;
+  height: auto;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 160px;
+  position: relative;
+}
+.container .container .stocks .body-stocks a.stock .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container .container .stocks .body-stocks a.stock .img .logo {
+  top: 15px;
+  right: 11px;
+  max-width: 71px;
+  max-height: 71px;
+  position: absolute;
+  border: 1px solid #dedede;
+}
+.container .container .stocks .body-stocks a.stock .img .logo img {
+  width: 100%;
+}
+.container .container .stocks .body-stocks a.stock .info {
+  max-width: 260px;
+  height: 164px;
+  position: relative;
+  border-left: 0;
+  display: table-row;
+  border-top: 1px solid #dedede;
+}
+.container .container .stocks .body-stocks a.stock .info p.headline {
+  max-width: 90%;
+  margin-right: 20px;
+  margin-left: 24px;
+  font-size: 15px;
+  line-height: 21px;
+  margin-top: 25px;
+  font-family: GothamPro-Medium;
+}
+.container .container .stocks .body-stocks a.stock .info .date {
+  bottom: 2px;
+  position: absolute;
+  margin-left: 24px;
   line-height: 24px;
+}
+.container .container .stocks .body-stocks a.stock:first-child {
+  max-width: 832px;
+  max-height: 423px;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #dedede;
+}
+.container .container .stocks .body-stocks a.stock:first-child .img {
+  height: auto;
+  max-width: 572px;
+  min-width: 400px;
+  max-height: 423px;
+  position: relative;
+}
+.container .container .stocks .body-stocks a.stock:first-child .img img {
+  width: 100%;
+  object-fit: cover;
+}
+.container .container .stocks .body-stocks a.stock:first-child .img .logo {
+  top: 15px;
+  right: 11px;
+  width: 71px;
+  height: 71px;
+  position: absolute;
+  border: 1px solid #dedede;
+}
+.container .container .stocks .body-stocks a.stock:first-child .img .logo img {
+  width: 100%;
+  height: 100%;
+}
+.container .container .stocks .body-stocks a.stock:first-child .info {
+  min-width: 240px;
+  height: 423px;
+  position: relative;
+  border-left: 1px solid #dedede;
+}
+.container .container .stocks .body-stocks a.stock:first-child .info p.headline {
+  max-width: 152px;
+  margin-left: 24px;
+  font-size: 15px;
+  line-height: 21px;
+  margin-top: 27px;
+  font-family: GothamPro-Medium;
+}
+.container .container .stocks .body-stocks a.stock:first-child .info p.text {
+  max-width: 90%;
+  min-width: 127px;
+  margin-left: 24px;
+  margin-right: 20px;
+  line-height: 24px;
+}
+.container .container .stocks .body-stocks a.stock:first-child .info .date {
+  bottom: 2px;
+  position: absolute;
+  margin-left: 24px;
+}
+.container .container .stocks .body-stocks a.stock:first-child .info .date p {
+  line-height: 24px;
+}
+.cinema {
+  width: 100%;
+  height: 585px;
+  position: relative;
+  margin-bottom: 200px;
+  background: #fab900;
+}
+.cinema:before {
+  content: "";
+  background: linear-gradient(-35deg, #fab900 16px, transparent 0), linear-gradient(35deg, #fab900 16px, transparent 0);
+  background-position: left top;
+  background-repeat: repeat-x;
+  background-size: 22px 32px;
+  display: block;
+  height: 32px;
+  width: 100%;
+  position: relative;
+  bottom: 32px;
+  left: 0;
+}
+.cinema:after {
+  content: "";
+  background: linear-gradient(-35deg, transparent 16px, #fab900 0), linear-gradient(35deg, transparent 16px, #fab900 0);
+  background-repeat: repeat-x;
+  background-position: left bottom;
+  background-size: 22px 32px;
+  display: block;
+  width: 100%;
+  height: 32px;
+  position: absolute;
+  bottom: -15px;
+  left: 0px;
+}
+.cinema .container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1685px;
+  min-width: 1170px;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.cinema .container .head-cinema {
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1;
+  margin-top: -25px;
+  -ms-flex-align: center;
+      align-items: center;
+  position: relative;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.cinema .container .head-cinema p {
+  color: #fff;
+  font-size: 32px;
+  line-height: 61px;
+  font-family: GothamPro-Medium;
+}
+.cinema .container .head-cinema a {
+  color: #fff;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+.cinema .container .head-cinema a img {
+  margin-left: 8px;
+}
+.cinema .container .background-text {
+  left: 75px;
+  right: 0;
+  color: #fff;
+  opacity: 0.15;
+  position: absolute;
+  text-align: center;
+  margin-top: -80px;
+  text-transform: uppercase;
+  font-family: GothamPro-Medium;
+  font-size: 141px;
+  line-height: 126px;
+  letter-spacing: -2.8px;
+}
+.cinema .container #cinema-slider {
+  margin-top: -10px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.cinema .container #cinema-slider .cinema-prev {
+  left: -40px;
+  cursor: pointer;
+  position: absolute;
+}
+.cinema .container #cinema-slider .cinema-next {
+  right: -40px;
+  cursor: pointer;
+  position: absolute;
+}
+.cinema .container #cinema-slider .slick-slide {
+  margin-right: 25px;
+}
+.cinema .container #cinema-slider .cinema-slide {
+  width: 261px;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  min-height: 387px;
+}
+.cinema .container #cinema-slider .cinema-slide img {
+  width: 100%;
+}
+@media screen and (max-device-width: 1500px) {
+  .container .links-block a.scheme,
+  .container .links-block a.how-to-get {
+    display: none;
+  }
+  a.stock:last-child {
+    display: none;
+  }
+}
+@media screen and (max-device-width: 1250px) {
+  a.stock:first-child p.text {
+    width: 65%;
+  }
 }
