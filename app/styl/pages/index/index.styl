@@ -1,30 +1,29 @@
+#main-slider
+  width: 100%
+  height: 100%
+  display: flex
+  align-items: center
+  position: relative
+  .slide
+    width: 100%
+    img
+      width: 100%
+  .slick-prev
+    left: 130px
+    cursor: pointer
+    position: absolute
+    z-index: 1
+  .slick-next
+    right: 130px
+    cursor: pointer
+    position: absolute
+    z-index: 1
 .container
   width: 100%
   margin: 0 auto
   max-width: 1920px
   min-width: 1170px
   align-items: center
-  #main-slider
-    width: 100%
-    height: 100%
-    display: flex
-    align-items: center
-    position: relative
-    .slide
-      width: 100%
-      max-height: 443px
-      img
-        width: 100%
-    .slick-prev
-      left: 130px
-      cursor: pointer
-      position: absolute
-      z-index: 1
-    .slick-next
-      right: 130px
-      cursor: pointer
-      position: absolute
-      z-index: 1
   .poster
     width: 175px
     height: 194px
@@ -35,18 +34,19 @@
   .container
     width: 100%
     margin: 0 auto
-    padding: 0 35px
-    max-width: 1685px
+    max-width: 1920px
     min-width: 1170px
     align-items: center
     .stocks
-      width: 100%
+      width: 90%
       margin: 0 auto
       height: 710px
       margin-top: -75px
       position: relative
       .head-stocks
+        width: 98.5%
         display: flex
+        margin: 0 auto
         align-items: center
         justify-content: space-between
         p
@@ -55,10 +55,20 @@
           font-family: GothamPro-Medium
         a
           display: flex
-          img
+          transition: 0.3s
+          align-items: center
+          &:hover
+            transition: 0.3s
+            color: $yellow
+            svg
+              path
+                transition: 0.3s
+                fill: $yellow
+          svg
+            transition: 0.3s
             margin-left: 8px
         .zigzag-line
-          width: 100%
+          width: 98.5%
           height: 7px
           margin-top: 48px
           position: absolute
@@ -165,9 +175,8 @@
                   line-height: 24px
 .cinema
   width: 100%
-  height: 585px
+  height: max-content
   position: relative
-  margin-bottom: 200px
   background: $yellow
   &:before
     content: ""
@@ -197,10 +206,12 @@
   .container
     width: 100%
     margin: 0 auto
-    max-width: 1685px
+    max-width: 1880px
     min-width: 1170px
     align-items: center
     .head-cinema
+      width: 90%
+      margin: 0 auto
       display: flex
       z-index: 1
       margin-top: -25px
@@ -215,40 +226,158 @@
       a
         color: $white
         display: flex
+        align-items: center
         cursor: pointer
-        img
+        transition: 0.3s
+        &:hover
+          transition: 0.3s
+          color: $light-yellow
+          svg
+            path
+              transition: 0.3s
+              fill: $light-yellow
+        svg
+          transition: 0.3s
           margin-left: 8px
     .background-text
+      top: 35px
       left: 75px
       right: 0
-      color: $white
-      opacity: 0.15
+      width: 70%
+      height: 100%
+      margin: 0 auto
+      max-width: 1200px
+      min-width: 440px
       position: absolute
-      text-align: center
-      margin-top: -80px
-      text-transform: uppercase
-      font-family: GothamPro-Medium
-      font-size: 141px
-      line-height: 126px
-      letter-spacing: -2.8px
+      background-image: url(../img/png/index/now-in-the-cinema.png)
+      background-size: 100%
+      background-repeat: no-repeat
     #cinema-slider
       margin-top: -10px
       display: flex
+      max-width: 91%
+      margin: 0 auto
+      margin-bottom: 75px
       align-items: center
       .cinema-prev
-        left: -40px
+        left: -32px
         cursor: pointer
         position: absolute
       .cinema-next
-        right: -40px
+        right: -38px
         cursor: pointer
         position: absolute
       .slick-slide
-        margin-right: 25px
+        margin: 0 12.5px
       .cinema-slide
-        width: 261px
-        display: flex !important
-        min-height: 387px
+        width: 100%
+        height: auto
+        max-height: 387px
         img
           width: 100%
+          height: 100%
+.container
+  .developments
+    width: 90%
+    margin: 0 auto
+    margin-top: 83px
+    margin-bottom: 200px
+    position: relative
+    .head-developments
+      width: 98.5%
+      display: flex
+      margin: 0 auto
+      align-items: center
+      justify-content: space-between
+      .left-block
+        width: 100%
+        display: flex
+        max-width: 545px
+        align-items: center
+        justify-content: space-between
+        p
+          font-size: 32px
+          line-height: 61px
+          font-family: GothamPro-Medium
+        .links-right
+          width: 100%
+          display: flex
+          max-width: 300px
+          align-items: center
+          justify-content: space-between
+          a
+            font-size: 16px
+            line-height: 61px
+            transition: 0.3s
+            color: $link-silver
+            &:hover
+              color: $hover-silver
+              transition: 0.3s
+            &.active
+              color: $yellow
+      a
+        display: flex
+        transition: 0.3s
+        align-items: center
+        &:hover
+          transition: 0.3s
+          color: $yellow
+          svg
+            path
+              transition: 0.3s
+              fill: $yellow
+        svg
+          transition: 0.3s
+          margin-left: 8px
+      .zigzag-line
+        width: 98.5%
+        height: 7px
+        margin-top: 48px
+        position: absolute
+        background-image: url(../img/svg/index/zigzag-line.svg)
+    #developments-slider
+      display: flex
+      margin: 0 auto
+      margin-top: 35px
+      align-items: center
+      .slick-arrow
+        cursor: pointer
+      .devel-prev
+        top: 135px
+        left: -32px
+        position: absolute
+      .devel-next
+        top: 135px
+        right: -32px
+        position: absolute
+      .slick-slide
+        margin: 0 13px
+      .development-slide
+        max-width: 545px
+        max-height: 640px
+        .img
+          max-width: 545px
+          max-height: 477px
+          img
+            width: 100%
+        .info
+          width: 100%
+          height: 100%
+          p.date
+            margin: 7px 0
+            margin-top: 18px
+            color: $link-silver
+            font-size: 11px
+            line-height: 21px
+          p.headline
+            margin: 7px 0
+            font-family: GothamPro-Medium
+            color: $dark-gray
+            font-size: 15px
+            line-height: 21px
+          p.text
+            margin: 7px 0
+            font-size: 14px
+            line-height: 30px
+
 @import '/media.styl'

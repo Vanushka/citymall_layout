@@ -1,21 +1,21 @@
 include include/header.pug
+section#main-slider
+  .slide
+    img(src="/dist/img/jpg/index/slider.jpg")
+  .slide
+    img(src="/dist/img/jpg/index/slider.jpg")
+  .slide
+    img(src="/dist/img/jpg/index/slider.jpg")
+  .slide
+    img(src="/dist/img/jpg/index/slider.jpg")
 .container
-  section#main-slider
-    .slide
-      img(src="/dist/img/jpg/index/slider.jpg")
-    .slide
-      img(src="/dist/img/jpg/index/slider.jpg")
-    .slide
-      img(src="/dist/img/jpg/index/slider.jpg")
-    .slide
-      img(src="/dist/img/jpg/index/slider.jpg")
   img.poster(src="/dist/img/svg/index/poster.svg")
   .container
     section.stocks
       .head-stocks
         p Акции и новинки
         a Все акции
-          img(src="/dist/img/svg/index/all-stock.svg")
+          img.svg(src="/dist/img/svg/index/all-stock.svg")
         .zigzag-line
       .body-stocks
         a.stock
@@ -60,8 +60,8 @@ section.cinema
     .head-cinema
       p Сейчас в кино
       a Смотреть все
-        img(src="/dist/img/svg/index/all-stock-cinema.svg")
-    .background-text Сейчас в кино
+        img.svg(src="/dist/img/svg/index/all-stock-cinema.svg")
+    .background-text
     #cinema-slider
       .cinema-slide
         img(src="./dist/img/jpg/index/aelita.jpg")
@@ -87,4 +87,81 @@ section.cinema
         img(src="./dist/img/jpg/index/mistresses.jpg")
       .cinema-slide
         img(src="./dist/img/jpg/index/humorist.jpg")
+.container
+  section.developments
+    .head-developments
+      .left-block
+        p События
+        .links-right
+          a.active Будущие события
+          a Архив событий
+      a Все события
+        img.svg(src="/dist/img/svg/index/all-stock.svg")
+      .zigzag-line
+    #developments-slider
+      .development-slide
+        .img
+          img(src="./dist/img/jpg/index/open-laboratory.jpg")
+        .info
+          p.date 6 МАРТА 2019
+          p.headline ПРОВЕРЬ СВОЮ КАРТИНУ МИРА НА «ЛАБЕ» ВМЕСТЕ С СУРГУ!
+          p.text Думаешь, что много знаешь об устройстве современного мира? Тогда докажи это! «Лаба» поможет тебе вспомнить всё: откуда мы произошли, как устроена природа и как работает техника. Интересно?
+      .development-slide
+        .img
+          img(src="./dist/img/jpg/index/pizza.jpg")
+        .info
+          p.date 8 ФЕВРАЛЯ 2019
+          p.headline ДЕНЬ ПИЦЦЫ!
+          p.text 10 февраля проводим День Пиццы! Праздник состоится в ТРЦ "Сургут Сити Молл". Начало в 10:00 и до... 1000-ой пиццы!
+      .development-slide
+        .img
+          img(src="./dist/img/jpg/index/yellow-girl.jpg")
+        .info
+          p.date 2 ФЕВРАЛЯ 2019
+          p.headline АФИША МЕРОПРИЯТИЙ НА ФЕВРАЛЬ 2019
+          p.text Афиша мероприятий на февраль 2019. Детский мастер-класс «Согреваем музыкой» концерт #всемпобарабану. «ЭтноКвиз»
+      .development-slide
+        .img
+          img(src="./dist/img/jpg/index/open-laboratory.jpg")
+        .info
+          p.date 6 МАРТА 2019
+          p.headline ПРОВЕРЬ СВОЮ КАРТИНУ МИРА НА «ЛАБЕ» ВМЕСТЕ С СУРГУ!
+          p.text Думаешь, что много знаешь об устройстве современного мира? Тогда докажи это! «Лаба» поможет тебе вспомнить всё: откуда мы произошли, как устроена природа и как работает техника. Интересно?
+      .development-slide
+        .img
+          img(src="./dist/img/jpg/index/pizza.jpg")
+        .info
+          p.date 8 ФЕВРАЛЯ 2019
+          p.headline ДЕНЬ ПИЦЦЫ!
+          p.text 10 февраля проводим День Пиццы! Праздник состоится в ТРЦ "Сургут Сити Молл". Начало в 10:00 и до... 1000-ой пиццы!
+      .development-slide
+        .img
+          img(src="./dist/img/jpg/index/yellow-girl.jpg")
+        .info
+          p.date 2 ФЕВРАЛЯ 2019
+          p.headline АФИША МЕРОПРИЯТИЙ НА ФЕВРАЛЬ 2019
+          p.text Афиша мероприятий на февраль 2019. Детский мастер-класс «Согреваем музыкой» концерт #всемпобарабану. «ЭтноКвиз»
+      .development-slide
+        .img
+          img(src="./dist/img/jpg/index/open-laboratory.jpg")
+        .info
+          p.date 6 МАРТА 2019
+          p.headline ПРОВЕРЬ СВОЮ КАРТИНУ МИРА НА «ЛАБЕ» ВМЕСТЕ С СУРГУ!
+          p.text Думаешь, что много знаешь об устройстве современного мира? Тогда докажи это! «Лаба» поможет тебе вспомнить всё: откуда мы произошли, как устроена природа и как работает техника. Интересно?
+      .development-slide
+        .img
+          img(src="./dist/img/jpg/index/pizza.jpg")
+        .info
+          p.date 8 ФЕВРАЛЯ 2019
+          p.headline ДЕНЬ ПИЦЦЫ!
+          p.text 10 февраля проводим День Пиццы! Праздник состоится в ТРЦ "Сургут Сити Молл". Начало в 10:00 и до... 1000-ой пиццы!
+      .development-slide
+        .img
+          img(src="./dist/img/jpg/index/yellow-girl.jpg")
+        .info
+          p.date 2 ФЕВРАЛЯ 2019
+          p.headline АФИША МЕРОПРИЯТИЙ НА ФЕВРАЛЬ 2019
+          p.text Афиша мероприятий на февраль 2019. Детский мастер-класс «Согреваем музыкой» концерт #всемпобарабану. «ЭтноКвиз»
+include include/vendor.pug
+script(src="./dist/js/index.js")
 include include/footer.pug
