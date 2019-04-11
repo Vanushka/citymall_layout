@@ -344,11 +344,11 @@
         cursor: pointer
       .devel-prev
         top: 135px
-        left: -32px
+        left: -34px
         position: absolute
       .devel-next
         top: 135px
-        right: -32px
+        right: -29px
         position: absolute
       .slick-slide
         margin: 0 13px
@@ -379,5 +379,319 @@
             margin: 7px 0
             font-size: 14px
             line-height: 30px
+  .container
+    width: 100%
+    margin: 0 auto
+    max-width: 1920px
+    min-width: 1170px
+    align-items: center
+    .new-items
+      width: 90%
+      margin: 0 auto
+      height: 710px
+      margin-bottom: 250px
+      margin-top: -75px
+      position: relative
+      .head-new-items
+        width: 98.5%
+        display: flex
+        margin: 0 auto
+        align-items: center
+        justify-content: space-between
+        p
+          font-size: 32px
+          line-height: 61px
+          font-family: GothamPro-Medium
+        a
+          display: flex
+          transition: 0.3s
+          align-items: center
+          &:hover
+            transition: 0.3s
+            color: $yellow
+            svg
+              path
+                transition: 0.3s
+                fill: $yellow
+          svg
+            transition: 0.3s
+            margin-left: 8px
+        .zigzag-line
+          width: 98.5%
+          height: 7px
+          margin-top: 48px
+          position: absolute
+          background-image: url(../img/svg/index/zigzag-line.svg)
+      .season
+        width: 98.5%
+        max-height: 120px
+        margin: 0 auto
+        margin-top: 43px
+        img
+          width: 100%
+          object-fit: cover
+      .body-new-items
+        width: 98.5%
+        margin: 0 auto
+        margin-top: 39px
+        max-height: 516px
+        &.four
+          display: grid
+          grid-gap: 24px
+          grid-template-areas:
+          "first second four"\
+          "first third four"
+          a.new-item
+            position: relative
+            .img
+              img
+            .block-text
+              position: absolute
+              p.headline
+                margin: 0
+                color: $white
+                font-size: 36px
+                line-height: 33px
+                font-family: "GothamPro-Medium"
+              p.text
+                margin: 0
+                color: $white
+                font-size: 15px
+                line-height: 15px
+            &:first-child
+              grid-area: first
+              .img
+                width: 100%
+                height: 100%
+                display: flex
+                max-width: 831px
+                max-height: 516px
+                min-width: 283px
+                img
+                  width: 100%
+                  height: 100%
+                  object-fit: cover
+              .block-text
+                width: 100%
+                width: 368px
+                margin-left: 50px
+                bottom: 40px
+            &:nth-child(2)
+              .img
+                width: 100%
+                height: 100%
+                display: flex
+                max-width: 451px
+                max-height: 246px
+                min-width: 222px
+                min-height: 77px
+                img
+                  width: 100%
+                  height: 100%
+                  object-fit: cover
+              grid-area: second
+              .block-text
+                width: 100%
+                width: 292px
+                margin-left: 30px
+                bottom: 28px
+            &:nth-child(3)
+              grid-area: third
+              .img
+                width: 100%
+                height: 100%
+                display: flex
+                max-width: 451px
+                max-height: 246px
+                min-width: 222px
+                min-height: 77px
+                img
+                  width: 100%
+                  height: 100%
+                  object-fit: cover
+              .block-text
+                width: 100%
+                max-width: 292px
+                margin-left: 30px
+                bottom: 28px
+            &:nth-child(4)
+              grid-area: four
+              .img
+                width: 100%
+                height: 100%
+                display: flex
+                max-width: 356px
+                max-height: 516px
+                min-width: 161px
+                min-height: 176px
+                img
+                  width: 100%
+                  height: 100%
+                  object-fit: cover
+              .block-text
+                width: 100%
+                width: 205px
+                margin-left: 30px
+                bottom: 27px
+        &.three
+          display: grid
+          grid-gap: 24px
+          grid-template-areas:
+          "first second third"
+          a.new-item
+            position: relative
+            .img
+              img
+            .block-text
+              position: absolute
+              p.headline
+                margin: 0
+                color: $white
+                font-size: 36px
+                line-height: 33px
+                font-family: "GothamPro-Medium"
+              p.text
+                margin: 0
+                color: $white
+                font-size: 15px
+                line-height: 33px
+            &:first-child
+              grid-area: first
+              .img
+                width: 100%
+                height: 100%
+                display: flex
+                max-width: 831px
+                max-height: 516px
+                img
+                  width: 100%
+                  height: 100%
+                  object-fit: cover
+              .block-text
+                width: 100%
+                width: 368px
+                margin-left: 50px
+                bottom: 57px
+            &:nth-child(2)
+              .img
+                width: 100%
+                height: 100%
+                display: flex
+                max-width: 356px
+                max-height: 516px
+                img
+                  width: 100%
+                  height: 100%
+                  object-fit: cover
+              .block-text
+                width: 100%
+                width: 310px
+                margin-left: 30px
+                bottom: 27px
+            &:nth-child(3)
+              grid-area: third
+              .img
+                width: 100%
+                height: 100%
+                display: flex
+                max-width: 356px
+                max-height: 516px
+                img
+                  width: 100%
+                  height: 100%
+                  object-fit: cover
+              .block-text
+                width: 100%
+                width: 310px
+                margin-left: 30px
+                bottom: 50px
+        &.two
+          display: grid
+          grid-gap: 24px
+          grid-template-areas:
+          "first second"
+          a.new-item
+            position: relative
+            .img
+              img
+            .block-text
+              position: absolute
+              p.headline
+                margin: 0
+                color: $white
+                font-size: 36px
+                line-height: 33px
+                font-family: "GothamPro-Medium"
+              p.text
+                margin: 0
+                color: $white
+                font-size: 15px
+                line-height: 33px
+            &:first-child
+              grid-area: first
+              .img
+                width: 100%
+                height: 100%
+                display: flex
+                max-height: 516px
+                img
+                  width: 100%
+                  object-fit: cover
+              .block-text
+                width: 100%
+                width: 368px
+                margin-left: 50px
+                bottom: 60px
+            &:nth-child(2)
+              .img
+                width: 100%
+                height: 100%
+                display: flex
+                max-height: 516px
+                img
+                  width: 100%
+                  object-fit: cover
+              .block-text
+                width: 100%
+                width: 368px
+                margin-left: 50px
+                bottom: 40px
+        &.one
+          display: grid
+          grid-gap: 24px
+          grid-template-areas:
+          "first"
+          a.new-item
+            position: relative
+            .img
+              img
+            .block-text
+              position: absolute
+              p.headline
+                margin: 0
+                color: $white
+                font-size: 36px
+                line-height: 33px
+                font-family: "GothamPro-Medium"
+              p.text
+                margin: 0
+                color: $white
+                font-size: 15px
+                line-height: 33px
+            &:first-child
+              grid-area: first
+              .img
+                width: 831px
+                height: 516px
+                img
+                  width: 100%
+                  height: 100%
+                  object-fit: cover
+              .block-text
+                width: 100%
+                width: 368px
+                margin-left: 50px
+                bottom: 30px
+
 
 @import '/media.styl'

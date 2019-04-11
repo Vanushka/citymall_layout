@@ -25,3 +25,22 @@ $('#developments-slider').slick({
   prevArrow: '<div class="devel-prev"><img src="./dist/img/svg/index/devel-prev.svg" /></div>',
   nextArrow: '<div class="devel-next"><img src="./dist/img/svg/index/devel-next.svg" /></div>',
 });
+
+var element = $('.body-new-items').children().length;
+switch (element) {
+  case 1:
+    $('.body-new-items').removeClass('four');
+    $('.body-new-items').addClass('one');
+    console.log('2');
+    break;
+  case 2:
+    $('.body-new-items').removeClass('four');
+    $('.body-new-items').addClass('two');
+    console.log('2');
+    break;
+  case 3:
+    $('.body-new-items').removeClass('four');
+    $('.body-new-items').addClass('three');
+    console.log('3');
+    break;
+}
