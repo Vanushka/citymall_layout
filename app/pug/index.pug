@@ -1,21 +1,21 @@
 include include/header.pug
 section#main-slider
   .slide
-    img(src="/dist/img/jpg/index/slider.jpg")
+    img(src="./dist/img/jpg/index/slider.jpg")
   .slide
-    img(src="/dist/img/jpg/index/slider.jpg")
+    img(src="./dist/img/jpg/index/slider.jpg")
   .slide
-    img(src="/dist/img/jpg/index/slider.jpg")
+    img(src="./dist/img/jpg/index/slider.jpg")
   .slide
-    img(src="/dist/img/jpg/index/slider.jpg")
+    img(src="./dist/img/jpg/index/slider.jpg")
 .container
-  img.poster(src="/dist/img/svg/index/poster.svg")
+  img.poster(src="./dist/img/svg/index/poster.svg")
   .container
     section.stocks
       .head-stocks
         p Акции и новинки
         a Все акции
-          img.svg(src="/dist/img/svg/index/all-stock.svg")
+          img.svg(src="./dist/img/svg/index/all-stock.svg")
         .zigzag-line
       .body-stocks
         a.stock
@@ -60,7 +60,7 @@ section.cinema
     .head-cinema
       p Сейчас в кино
       a Смотреть все
-        img.svg(src="/dist/img/svg/index/all-stock-cinema.svg")
+        img.svg(src="./dist/img/svg/index/all-stock-cinema.svg")
     .background-text
     #cinema-slider
       .cinema-slide
@@ -96,7 +96,7 @@ section.cinema
           a.active Будущие события
           a Архив событий
       a Все события
-        img.svg(src="/dist/img/svg/index/all-stock.svg")
+        img.svg(src="./dist/img/svg/index/all-stock.svg")
       .zigzag-line
     #developments-slider
       .development-slide
@@ -167,7 +167,7 @@ section.cinema
       .head-new-items
         p Новинки сезона
         a Все новинки
-          img.svg(src="/dist/img/svg/index/all-stock.svg")
+          img.svg(src="./dist/img/svg/index/all-stock.svg")
         .zigzag-line
       .season
         img(src="./dist/img/jpg/index/spring.jpg")
@@ -184,7 +184,7 @@ section.cinema
           .block-text
             p.headline Pandora
             p.text Новая коллекция PANDORA «Мечта»
-        //-a.new-item
+        a.new-item
           .img
             img(src="./dist/img/jpg/index/viceroy.jpg")
           .block-text
@@ -196,6 +196,41 @@ section.cinema
           .block-text
             p.headline Cropp
             p.text Новая коллекция Sicoer x в Cropp!
-include include/vendor.pug
-script(src="./dist/js/index.js")
-include include/footer.pug
+  .container
+    section.instagram-block
+      .head-instagram
+        .left-block
+          p Мы в инстаграме
+          .links-right
+            a <img class="svg" src="./dist/img/svg/index/instagram-silver.svg"> @surgutcitymall
+        a Все фотографии
+          img.svg(src="./dist/img/svg/index/all-stock.svg")
+        .zigzag-line
+      #instagram-slider
+        .img
+          img(src="./dist/img/jpg/index/bonlook.jpg")
+        .img
+          img(src="./dist/img/jpg/index/man-in-a-hat.jpg")
+        .img
+          img(src="./dist/img/jpg/index/family.jpg")
+        .img
+          img(src="./dist/img/jpg/index/first-level.jpg")
+        .img
+          img(src="./dist/img/jpg/index/red-girl.jpg")
+        .img
+          img(src="./dist/img/jpg/index/people.jpg")
+        .img
+          img(src="./dist/img/jpg/index/bonlook.jpg")
+        .img
+          img(src="./dist/img/jpg/index/man-in-a-hat.jpg")
+        .img
+          img(src="./dist/img/jpg/index/family.jpg")
+        .img
+          img(src="./dist/img/jpg/index/first-level.jpg")
+        .img
+          img(src="./dist/img/jpg/index/red-girl.jpg")
+        .img
+          img(src="./dist/img/jpg/index/people.jpg")
+  include include/vendor.pug 
+  script(src="./dist/js/index.js")
+  include include/footer.pug

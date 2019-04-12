@@ -388,9 +388,8 @@
     .new-items
       width: 90%
       margin: 0 auto
-      height: 710px
-      margin-bottom: 250px
-      margin-top: -75px
+      height: max-content
+      margin-top: -140px
       position: relative
       .head-new-items
         width: 98.5%
@@ -452,7 +451,7 @@
                 color: $white
                 font-size: 36px
                 line-height: 33px
-                font-family: "GothamPro-Medium"
+                font-family: GothamPro-Medium
               p.text
                 margin: 0
                 color: $white
@@ -549,7 +548,7 @@
                 color: $white
                 font-size: 36px
                 line-height: 33px
-                font-family: "GothamPro-Medium"
+                font-family: GothamPro-Medium
               p.text
                 margin: 0
                 color: $white
@@ -621,7 +620,7 @@
                 color: $white
                 font-size: 36px
                 line-height: 33px
-                font-family: "GothamPro-Medium"
+                font-family: GothamPro-Medium
               p.text
                 margin: 0
                 color: $white
@@ -672,7 +671,7 @@
                 color: $white
                 font-size: 36px
                 line-height: 33px
-                font-family: "GothamPro-Medium"
+                font-family: GothamPro-Medium
               p.text
                 margin: 0
                 color: $white
@@ -692,6 +691,89 @@
                 width: 368px
                 margin-left: 50px
                 bottom: 30px
+  .container
+    .instagram-block
+      width: 90%
+      margin: 0 auto
+      margin-top: 89px
+      position: relative
+      .head-instagram
+        width: 98.5%
+        display: flex
+        margin: 0 auto
+        align-items: center
+        justify-content: space-between
+        .left-block
+          width: 100%
+          display: flex
+          max-width: 666px
+          align-items: center
+          justify-content: space-between
+          p
+            font-size: 32px
+            line-height: 61px
+            font-family: GothamPro-Medium
+          .links-right
+            width: 100%
+            display: flex
+            max-width: 300px
+            align-items: center
+            justify-content: space-between
+            a
+              font-size: 16px
+              line-height: 61px
+              transition: 0.3s
+              color: $link-silver
+              svg
+                margin-right: 8px
+                margin-bottom: 3px
+                path
+                  transition: 0.3s
 
+              &:hover
+                color: $yellow
+                transition: 0.3s
+        a
+          display: flex
+          transition: 0.3s
+          align-items: center
+          &:hover
+            transition: 0.3s
+            color: $yellow
+            svg
+              path
+                transition: 0.3s
+                fill: $yellow
+          svg
+            transition: 0.3s
+            margin-left: 8px
+        .zigzag-line
+          width: 98.5%
+          height: 7px
+          margin-top: 48px
+          position: absolute
+          background-image: url(../img/svg/index/zigzag-line.svg)
+      #instagram-slider
+        display: flex
+        margin: 0 auto
+        margin-top: 31px
+        align-items: center
+        .slick-arrow
+          cursor: pointer
+        .instagram-prev
+          left: -34px
+          position: absolute
+        .instagram-next
+          right: -32px
+          position: absolute
+        .slick-slide
+          margin: 0 13px
+        .img
+          width: 100%
+          height: 100%
+          max-width: 261px
+          max-height: 261px
+          img
+            width: 100%
 
 @import '/media.styl'

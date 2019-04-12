@@ -22,11 +22,11 @@ $('#developments-slider').slick({
   slidesToShow: 3,
   autoplaySpeed: 2000,
   adaptiveHeight: true,
-  prevArrow: '<div class="devel-prev"><img src="./dist/img/svg/index/devel-prev.svg" /></div>',
-  nextArrow: '<div class="devel-next"><img src="./dist/img/svg/index/devel-next.svg" /></div>',
+  prevArrow: '<div class="devel-prev"><img src="./dist/img/svg/index/silver-prev.svg" /></div>',
+  nextArrow: '<div class="devel-next"><img src="./dist/img/svg/index/silver-next.svg" /></div>',
 });
 
-var element = $('.body-new-items').children().length;
+let element = $('.body-new-items').children().length;
 switch (element) {
   case 1:
     $('.body-new-items').removeClass('four');
@@ -44,3 +44,12 @@ switch (element) {
     console.log('3');
     break;
 }
+
+$('#instagram-slider').slick({
+  infinite: true,
+  slidesToShow: 6,
+  autoplaySpeed: 2000,
+  adaptiveHeight: true,
+  prevArrow: '<div class="instagram-prev"><img src="./dist/img/svg/index/silver-prev.svg" /></div>',
+  nextArrow: '<div class="instagram-next"><img src="./dist/img/svg/index/silver-next.svg" /></div>',
+});
