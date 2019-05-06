@@ -25,12 +25,18 @@
   min-width: 1170px
   align-items: center
   .poster
-    width: 175px
+    width: 205px
     height: 194px
     bottom: 80px
     cursor: pointer
-    margin-left: 60px
+    margin-left: 87px
     position: relative
+    background: url(../img/svg/index/poster.svg)
+    background-position: 0 0
+    background-repeat: no-repeat
+    &:hover
+      background-position: -253px 0
+
   .container
     width: 100%
     margin: 0 auto
@@ -84,25 +90,54 @@
           max-height: 423px
           min-width: 160px
           cursor: pointer
+          transition: .3s
           border: 1px solid $border-silver
+          &:hover
+            transition: .3s
+            background: $yellow
+            p.headline, p.text, .date p
+              color: $white
+              transition: .3s
+            .img
+              .background
+                opacity: 0.7
+                transition: .3s
+              img
+                transition: all 1s ease-out
+                transform: scale(1.1)
+          p.headline, p.text, .date p
+            transition: .3s
           .img
+            cursor: pointer
+            overflow: hidden
             max-width: 260px
             height: auto
             display: flex
             min-width: 160px
             position: relative
+            .background
+              width: 100%
+              height: 100%
+              z-index: 1
+              opacity: 0
+              transition: .3s
+              position: absolute
+              background: $black
             img
               width: 100%
               height: 100%
               object-fit: cover
+              transition: all 1s ease-out
             .logo
               top: 15px
               right: 11px
+              z-index: 1
               max-width: 71px
               max-height: 71px
               position: absolute
               border: 1px solid $border-silver
               img
+                transform: none
                 width: 100%
           .info
             max-width: 260px
@@ -153,7 +188,6 @@
               min-width: 240px
               height: 423px
               position: relative
-              border-left: 1px solid $border-silver
               p.headline
                 max-width: 152px
                 margin-left: 24px
@@ -168,7 +202,7 @@
                 margin-right: 20px
                 line-height: 24px
               .date
-                bottom: 2px
+                bottom: 7px
                 position: absolute
                 margin-left: 24px
                 p
@@ -272,10 +306,78 @@
       .cinema-slide
         width: 100%
         height: auto
+        overflow: hidden
+        cursor: pointer
+        position: relative
         max-height: 387px
+        .info
+          .background
+            width: 100%
+            height: 100%
+            z-index: 1
+            opacity: 0
+            transition: .3s
+            position: absolute
+            background: $black
+          .block-inside
+            z-index: 0
+            opacity: 0
+            margin-left: 23px
+            position: absolute
+            p.name
+              margin: 0
+              margin-top: 26px
+              color: $white
+              font-family: GothamPro-Medium
+              font-size: 15px
+              line-height: 20px
+            span.genre
+              color: $yellow
+              font-family: GothamPro
+              font-size: 13px
+              line-height: 20px
+            .sessions
+              margin-top: 35%
+              p
+                color: $white
+                font-family: GothamPro-Medium
+                font-size: 14px
+                line-height: 20px
+              .times
+                width: 90%
+                display: flex
+                margin-top: 10px
+                flex-wrap: wrap
+                flex-direction: row
+                justify-content: space-between
+                .time
+                  width: 47px
+                  height: 17px
+                  background: $red
+                  margin-bottom: 10px
+                  display: flex
+                  align-items: center
+                  justify-content: center
+                  padding-top: 4px
+                  span
+                    color: $white
+                    font-family: GothamPro
+                    font-size: 13px
+                    line-height: 20px
+        &:hover
+          .info
+            z-index: 1
+            .background
+              opacity: 0.7
+            .block-inside
+              opacity: 1
+              z-index: 1
+          img
+            transform: scale(1.1)
         img
           width: 100%
           height: 100%
+          transition: all 1s ease-out
 .container
   .developments
     width: 90%
@@ -353,13 +455,38 @@
       .slick-slide
         margin: 0 13px
       .development-slide
+        cursor: pointer
+        position: relative
         max-width: 545px
         max-height: 640px
+        &:hover
+          .img
+            .background
+              opacity: 0.7
+              transition: .3s
+            img
+              transform: scale(1.1)
+          .info
+            p.headline
+              color: $yellow
+              transition: .3s
         .img
+          overflow: hidden
+          position: relative
           max-width: 545px
           max-height: 477px
-          img
+          .background
             width: 100%
+            height: 100%
+            z-index: 1
+            opacity: 0
+            transition: .3s
+            position: absolute
+            background: $black
+          img
+            height: auto
+            max-width: 100%
+            transition: all 1s ease-out
         .info
           width: 100%
           height: 100%
@@ -371,6 +498,122 @@
             line-height: 21px
           p.headline
             margin: 7px 0
+            transition: .3s
+            font-family: GothamPro-Medium
+            color: $dark-gray
+            font-size: 15px
+            line-height: 21px
+          p.text
+            margin: 7px 0
+            font-size: 14px
+            line-height: 30px
+  .videos
+    width: 90%
+    margin: 0 auto
+    height: max-content
+    margin-top: -140px
+    margin-bottom: 170px
+    position: relative
+    .head-videos
+      width: 98.5%
+      display: flex
+      margin: 0 auto
+      align-items: center
+      justify-content: space-between
+      p
+        font-size: 32px
+        line-height: 61px
+        font-family: GothamPro-Medium
+      a
+        display: flex
+        transition: 0.3s
+        align-items: center
+        &:hover
+          transition: 0.3s
+          color: $yellow
+          svg
+            path
+              transition: 0.3s
+              fill: $yellow
+        svg
+          transition: 0.3s
+          margin-left: 8px
+      .zigzag-line
+        width: 98.5%
+        height: 7px
+        margin-top: 48px
+        position: absolute
+        background-image: url(../img/svg/index/zigzag-line.svg)
+    .body-videos
+      width: 98.5%
+      margin: 0 auto
+      margin-top: 42px
+      display: flex
+      position: relative
+      justify-content: space-between
+      .block-video
+        cursor: pointer
+        position: relative
+        max-width: 546px
+        max-height: 408px
+        &:hover
+          .img
+            .background
+              opacity: 0.7
+              transition: .3s
+            .arrow
+              img
+                transition: .3s
+                transform: scale(0.7)
+          .info
+            p.headline
+              color: $yellow
+              transition: .3s
+        .img
+          overflow: hidden
+          position: relative
+          max-width: 546px
+          max-height: 307px
+          .background
+            width: 100%
+            height: 100%
+            z-index: 1
+            opacity: 0.4
+            transition: .3s
+            position: absolute
+            background: $black
+          .arrow
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            z-index: 1
+            margin: 0 auto
+            display: flex
+            position: absolute
+            align-items: center
+            justify-content: center
+            img
+              width: 44px
+              height: 56px
+              transition: .3s
+
+          img
+            height: auto
+            max-width: 100%
+            transition: all 1s ease-out
+        .info
+          width: 100%
+          height: 100%
+          p.date
+            margin: 7px 0
+            margin-top: 18px
+            color: $link-silver
+            font-size: 11px
+            line-height: 21px
+          p.headline
+            margin: 7px 0
+            transition: .3s
             font-family: GothamPro-Medium
             color: $dark-gray
             font-size: 15px
@@ -441,19 +684,44 @@
           "first second four"\
           "first third four"
           a.new-item
+            overflow: hidden
             position: relative
+            .background
+              width: 100%
+              height: 100%
+              z-index: 1
+              opacity: 0
+              transition: .3s
+              position: absolute
+              background: $black
             .img
+              position: relative
               img
+                transition: all 1s ease-out
+            &:hover
+              .background
+                opacity: 0.7
+                transition: .3s
+              img
+                transition: all 1s ease-out
+                transform: scale(1.1)
+              .block-text
+                p.headline, p.text
+                  color: $yellow
+                  transition: .3s
             .block-text
+              z-index: 1
               position: absolute
               p.headline
                 margin: 0
                 color: $white
                 font-size: 36px
                 line-height: 33px
+                transition: .3s
                 font-family: GothamPro-Medium
               p.text
                 margin: 0
+                transition: .3s
                 color: $white
                 font-size: 15px
                 line-height: 15px
@@ -463,7 +731,7 @@
                 width: 100%
                 height: 100%
                 display: flex
-                max-width: 831px
+                // max-width: 831px
                 max-height: 516px
                 min-width: 283px
                 img
@@ -480,7 +748,7 @@
                 width: 100%
                 height: 100%
                 display: flex
-                max-width: 451px
+                // max-width: 451px
                 max-height: 246px
                 min-width: 222px
                 min-height: 77px
@@ -500,7 +768,7 @@
                 width: 100%
                 height: 100%
                 display: flex
-                max-width: 451px
+                // max-width: 451px
                 max-height: 246px
                 min-width: 222px
                 min-height: 77px
@@ -519,7 +787,7 @@
                 width: 100%
                 height: 100%
                 display: flex
-                max-width: 356px
+                // max-width: 356px
                 max-height: 516px
                 min-width: 161px
                 min-height: 176px
@@ -538,10 +806,33 @@
           grid-template-areas:
           "first second third"
           a.new-item
+            overflow: hidden
             position: relative
+            .background
+              width: 100%
+              height: 100%
+              z-index: 1
+              opacity: 0
+              transition: .3s
+              position: absolute
+              background: $black
             .img
+              position: relative
               img
+                transition: all 1s ease-out
+            &:hover
+              .background
+                opacity: 0.7
+                transition: .3s
+              img
+                transition: all 1s ease-out
+                transform: scale(1.1)
+              .block-text
+                p.headline, p.text
+                  color: $yellow
+                  transition: .3s
             .block-text
+              z-index: 1
               position: absolute
               p.headline
                 margin: 0
@@ -560,7 +851,7 @@
                 width: 100%
                 height: 100%
                 display: flex
-                max-width: 831px
+                // max-width: 831px
                 max-height: 516px
                 img
                   width: 100%
@@ -576,7 +867,7 @@
                 width: 100%
                 height: 100%
                 display: flex
-                max-width: 356px
+                // max-width: 356px
                 max-height: 516px
                 img
                   width: 100%
@@ -593,7 +884,7 @@
                 width: 100%
                 height: 100%
                 display: flex
-                max-width: 356px
+                // max-width: 356px
                 max-height: 516px
                 img
                   width: 100%
@@ -610,10 +901,33 @@
           grid-template-areas:
           "first second"
           a.new-item
+            overflow: hidden
             position: relative
+            .background
+              width: 100%
+              height: 100%
+              z-index: 1
+              opacity: 0
+              transition: .3s
+              position: absolute
+              background: $black
             .img
+              position: relative
               img
+                transition: all 1s ease-out
+            &:hover
+              .background
+                opacity: 0.7
+                transition: .3s
+              img
+                transition: all 1s ease-out
+                transform: scale(1.1)
+              .block-text
+                p.headline, p.text
+                  color: $yellow
+                  transition: .3s
             .block-text
+              z-index: 1
               position: absolute
               p.headline
                 margin: 0
@@ -640,7 +954,7 @@
                 width: 100%
                 width: 368px
                 margin-left: 50px
-                bottom: 60px
+                bottom: 43px
             &:nth-child(2)
               .img
                 width: 100%
@@ -661,10 +975,34 @@
           grid-template-areas:
           "first"
           a.new-item
+            max-width: 831px
+            overflow: hidden
             position: relative
+            .background
+              width: 100%
+              height: 100%
+              z-index: 1
+              opacity: 0
+              transition: .3s
+              position: absolute
+              background: $black
             .img
+              position: relative
               img
+                transition: all 1s ease-out
+            &:hover
+              .background
+                opacity: 0.7
+                transition: .3s
+              img
+                transition: all 1s ease-out
+                transform: scale(1.1)
+              .block-text
+                p.headline, p.text
+                  color: $yellow
+                  transition: .3s
             .block-text
+              z-index: 1
               position: absolute
               p.headline
                 margin: 0
@@ -769,11 +1107,30 @@
         .slick-slide
           margin: 0 13px
         .img
+          cursor: pointer
+          overflow: hidden
           width: 100%
           height: 100%
+          position: relative
           max-width: 261px
           max-height: 261px
+          .background
+            width: 100%
+            height: 100%
+            z-index: 1
+            opacity: 0
+            transition: .3s
+            position: absolute
+            background: $black
           img
             width: 100%
+            transition: all 1s ease-out
+          &:hover
+            .background
+              opacity: 0.7
+              transition: .3s
+            img
+              transition: all 1s ease-out
+              transform: scale(1.1)
 
 @import '/media.styl'

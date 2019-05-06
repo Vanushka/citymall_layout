@@ -1,4 +1,5 @@
 //--COLORS--
+$red            = #F6120D
 $black          = #000000
 $white          = #ffffff
 $dark-gray      = #484848
@@ -9,7 +10,7 @@ $hover-silver   = #e2e2e2
 $yellow         = #FAB900
 $light-yellow   = #ffdf88
 
-
+//--COMMON-STYLES--
 body
   margin: 0
 
@@ -20,6 +21,16 @@ a
   font-family: GothamPro
   font-size: 13px
   line-height: 35px
+  transition: .3s
+  svg
+    transition: .3s
+  &:hover
+    color: $yellow
+    transition: .3s
+    svg
+      path
+        transition: .3s
+        fill: $yellow
 
 p
   color: $dark-gray
@@ -27,6 +38,7 @@ p
   font-size: 13px
   line-height: 35px
 
+//--IMPORTS--
 @import 'include/fonts.styl'
 @import 'include/header.styl'
 @import 'pages/index/index.styl'
