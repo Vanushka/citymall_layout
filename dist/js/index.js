@@ -23,6 +23,14 @@ $(document).ready(function() {
         slidesToShow: 5,
       }
     },
+    {
+      breakpoint: 1170,
+      settings: {
+        arrows:false,
+        slidesToShow: 4,
+        centerMode: true,
+      }
+    },
   ]
   });
 
@@ -33,6 +41,16 @@ $(document).ready(function() {
     adaptiveHeight: true,
     prevArrow: '<div class="devel-prev"><img src="./dist/img/svg/index/silver-prev.svg" /></div>',
     nextArrow: '<div class="devel-next"><img src="./dist/img/svg/index/silver-next.svg" /></div>',
+    responsive: [
+    {
+      breakpoint: 1170,
+      settings: {
+        arrows:false,
+        slidesToShow: 3,
+        centerMode: true,
+      }
+    },
+  ]
   });
 
   let element = $('.body-new-items').children().length;
@@ -61,5 +79,15 @@ $(document).ready(function() {
     adaptiveHeight: true,
     prevArrow: '<div class="instagram-prev"><img src="./dist/img/svg/index/silver-prev.svg" /></div>',
     nextArrow: '<div class="instagram-next"><img src="./dist/img/svg/index/silver-next.svg" /></div>',
+    responsive: [
+      {
+        breakpoint: 1170,
+        settings: {
+          arrows:false,
+          slidesToShow: 4,
+          centerMode: true,
+        }
+      },
+    ]
   });
 });

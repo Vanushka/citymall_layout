@@ -22,7 +22,6 @@
   width: 100%
   margin: 0 auto
   max-width: 1920px
-  min-width: 1170px
   align-items: center
   .poster
     width: 205px
@@ -41,7 +40,6 @@
     width: 100%
     margin: 0 auto
     max-width: 1920px
-    min-width: 1170px
     align-items: center
     .stocks
       width: 90%
@@ -71,8 +69,9 @@
                 transition: 0.3s
                 fill: $yellow
           svg
-            transition: 0.3s
             margin-left: 8px
+            path
+              transition: 0.3s
         .zigzag-line
           width: 98.5%
           height: 7px
@@ -188,6 +187,7 @@
               min-width: 240px
               height: 423px
               position: relative
+              border-top: none
               p.headline
                 max-width: 152px
                 margin-left: 24px
@@ -241,7 +241,6 @@
     width: 100%
     margin: 0 auto
     max-width: 1880px
-    min-width: 1170px
     align-items: center
     .head-cinema
       width: 90%
@@ -271,8 +270,9 @@
               transition: 0.3s
               fill: $light-yellow
         svg
-          transition: 0.3s
           margin-left: 8px
+          path
+            transition: 0.3s
     .background-text
       top: 35px
       left: 75px
@@ -429,8 +429,9 @@
               transition: 0.3s
               fill: $yellow
         svg
-          transition: 0.3s
           margin-left: 8px
+          path
+            transition: 0.3s
       .zigzag-line
         width: 98.5%
         height: 7px
@@ -545,13 +546,14 @@
         position: absolute
         background-image: url(../img/svg/index/zigzag-line.svg)
     .body-videos
-      width: 98.5%
+      width: 100%
       margin: 0 auto
       margin-top: 42px
       display: flex
       position: relative
       justify-content: space-between
       .block-video
+        margin: 0 12px
         cursor: pointer
         position: relative
         max-width: 546px
@@ -570,6 +572,7 @@
               color: $yellow
               transition: .3s
         .img
+          display: grid
           overflow: hidden
           position: relative
           max-width: 546px
@@ -626,7 +629,6 @@
     width: 100%
     margin: 0 auto
     max-width: 1920px
-    min-width: 1170px
     align-items: center
     .new-items
       width: 90%
@@ -656,8 +658,9 @@
                 transition: 0.3s
                 fill: $yellow
           svg
-            transition: 0.3s
             margin-left: 8px
+            path
+              transition: 0.3s
         .zigzag-line
           width: 98.5%
           height: 7px
@@ -1083,8 +1086,9 @@
                 transition: 0.3s
                 fill: $yellow
           svg
-            transition: 0.3s
             margin-left: 8px
+            path
+              transition: 0.3s
         .zigzag-line
           width: 98.5%
           height: 7px

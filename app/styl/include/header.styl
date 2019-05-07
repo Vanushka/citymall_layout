@@ -7,7 +7,6 @@ header
     margin: 0 auto
     display: flex
     max-width: 1920px
-    min-width: 1170px
     align-items: center
     justify-content: space-between
     .main-logo
@@ -50,44 +49,50 @@ header
           margin-right: 8px
           path
             transition: .3s
-    p.operation-mode
-      padding: 0 10px
+    .mode-and-social
       display: flex
-      white-space: nowrap
-      position: relative
+      width: 100%
+      max-width: 334px
       align-items: center
       justify-content: space-between
-      &:before
-        content ""
-        width: 16px
-        height: 16px
-        margin-right: 8px
-        background-image: url(../img/svg/header/clock.svg)
-    .social-links
-      padding: 0 20px
-      display: flex
-      align-items: center
-      justify-content: space-between
-      .instagram
-        width: 21.78px
-        height: 21.78px
-        svg
-          path
-            transition: .3s
-      .facebook
-        width: 12px
-        height: 23px
-        margin-left: 25px
-        svg
-          path
-            transition: .3s
-      .vk
-        width: 25.5px
-        height: 25.5px
-        margin-left: 25px
-        svg
-          path
-            transition: .3s
+      p.operation-mode
+        padding: 0 10px
+        display: flex
+        white-space: nowrap
+        position: relative
+        align-items: center
+        justify-content: space-between
+        &:before
+          content ""
+          width: 16px
+          height: 16px
+          margin-right: 8px
+          background-image: url(../img/svg/header/clock.svg)
+      .social-links
+        padding: 0 20px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        .instagram
+          width: 21.78px
+          height: 21.78px
+          svg
+            path
+              transition: .3s
+        .facebook
+          width: 12px
+          height: 23px
+          margin-left: 25px
+          svg
+            path
+              transition: .3s
+        .vk
+          width: 25.5px
+          height: 25.5px
+          margin-left: 25px
+          svg
+            path
+              transition: .3s
     .search-and-burger
       display: flex
       margin-right: 20px
@@ -103,7 +108,7 @@ header
             transition: .3s
       .menu-icon
         position: relative
-        width: 20px
+        width: 21px
         height: 20px
         cursor: pointer
         transition: .3s
