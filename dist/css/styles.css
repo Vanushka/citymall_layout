@@ -1826,7 +1826,7 @@ header .container .search-and-burger .menu-icon.clicked .dot:nth-of-type(9) {
   }
   .container .container .stocks .body-stocks a.stock:first-child .img {
     min-width: auto;
-    min-height: 198px;
+    min-height: 160px;
     max-height: 260px;
   }
   .container .container .stocks .body-stocks a.stock:first-child .info {

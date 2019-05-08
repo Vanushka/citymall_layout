@@ -98,4 +98,11 @@ $(document).ready(function() {
       },
     ]
   });
+
+  //--FOR-FIRST-STOCK-IMG-BLOCK-TABLET--
+  if ($(window).width() < 1170){
+    var stockImg = $('.stock:eq(2) .img').height();
+  	$('.stock:eq(0) .img').height(stockImg);
+  }
+
 });
