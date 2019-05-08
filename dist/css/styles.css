@@ -117,7 +117,7 @@ header .container .mode-and-social {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  max-width: 334px;
+  max-width: 310px;
   -ms-flex-align: center;
       align-items: center;
   -ms-flex-pack: justify;
@@ -176,7 +176,7 @@ header .container .mode-and-social .social-links .vk svg path {
 header .container .search-and-burger {
   display: -ms-flexbox;
   display: flex;
-  margin-right: 20px;
+  margin-right: 60px;
   -ms-flex-align: center;
       align-items: center;
   -ms-flex-pack: justify;
@@ -192,9 +192,10 @@ header .container .search-and-burger .search svg path {
   transition: 0.3s;
 }
 header .container .search-and-burger .menu-icon {
-  position: relative;
+  position: absolute;
   width: 21px;
   height: 20px;
+  margin-left: 50px;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -1783,7 +1784,7 @@ header .container .search-and-burger .menu-icon.clicked .dot:nth-of-type(9) {
     width: 172px;
     height: 125px;
     bottom: 55px;
-    margin-left: 0;
+    margin-left: -18px;
     background-size: 160%;
     background-position: 32px 0;
   }
@@ -1792,6 +1793,8 @@ header .container .search-and-burger .menu-icon.clicked .dot:nth-of-type(9) {
   }
   .container .container .stocks {
     width: 95%;
+    height: 650px;
+    margin-top: -80px;
   }
   .container .container .stocks .head-stocks p {
     font-size: 22px;
@@ -1803,9 +1806,14 @@ header .container .search-and-burger .menu-icon.clicked .dot:nth-of-type(9) {
     margin-top: 15px;
   }
   .container .container .stocks .body-stocks a.stock {
+    margin: 0 10px;
     max-height: none;
     -ms-flex-direction: column;
         flex-direction: column;
+  }
+  .container .container .stocks .body-stocks a.stock .img .logo {
+    width: 50px;
+    height: 50px;
   }
   .container .container .stocks .body-stocks a.stock .info {
     max-width: -webkit-fit-content;
@@ -1813,9 +1821,15 @@ header .container .search-and-burger .menu-icon.clicked .dot:nth-of-type(9) {
     max-width: fit-content;
   }
   .container .container .stocks .body-stocks a.stock .info p.headline {
+    max-width: 90% !important;
+    margin-left: 16px !important;
     font-size: 13px !important;
   }
+  .container .container .stocks .body-stocks a.stock .info .date {
+    margin-left: 16px;
+  }
   .container .container .stocks .body-stocks a.stock .info .date p {
+    font-size: 11px;
     margin-bottom: 6px;
   }
   .container .container .stocks .body-stocks a.stock:first-child {
@@ -1829,26 +1843,39 @@ header .container .search-and-burger .menu-icon.clicked .dot:nth-of-type(9) {
     min-height: 160px;
     max-height: 260px;
   }
+  .container .container .stocks .body-stocks a.stock:first-child .img .logo {
+    width: 50px;
+    height: 50px;
+  }
   .container .container .stocks .body-stocks a.stock:first-child .info {
     height: auto;
     width: 100%;
   }
   .container .container .stocks .body-stocks a.stock:first-child .info p.text {
     width: 95%;
+    margin-left: 16px;
   }
   .container .container .stocks .body-stocks a.stock:first-child .info .date {
+    margin-left: 16px !important;
     position: inherit;
   }
   .container .container .stocks .body-stocks a.stock:first-child .info .date p {
     margin-bottom: 12px;
   }
+  .cinema .container .background-text {
+    left: 30px;
+    width: 60%;
+    top: 5px;
+  }
   .cinema .container .head-cinema {
     width: 92%;
+    height: 50px;
   }
   .cinema .container .head-cinema p {
     font-size: 22px;
   }
   .cinema .container #cinema-slider {
+    margin-bottom: 54px;
     max-width: 100%;
   }
   .cinema .container #cinema-slider .cinema-slide .info .block-inside {
@@ -1862,6 +1889,7 @@ header .container .search-and-burger .menu-icon.clicked .dot:nth-of-type(9) {
   }
   .container .developments {
     width: 100%;
+    margin-top: 32px;
   }
   .container .developments .head-developments {
     width: 93%;
@@ -1903,6 +1931,10 @@ header .container .search-and-burger .menu-icon.clicked .dot:nth-of-type(9) {
   }
   .container .videos .body-videos .block-video .info p.headline {
     font-size: 13px;
+  }
+  .container .videos .body-videos .block-video .img .arrow img {
+    width: 24px;
+    height: 30px;
   }
   .container .container .new-items {
     width: 95%;
