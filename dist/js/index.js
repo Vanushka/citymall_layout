@@ -31,6 +31,14 @@ $(document).ready(function() {
         centerMode: true,
       }
     },
+    {
+      breakpoint: 890,
+      settings: {
+        arrows:false,
+        slidesToShow: 3,
+        centerMode: true,
+      }
+    },
   ]
   });
 

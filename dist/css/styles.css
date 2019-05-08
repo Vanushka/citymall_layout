@@ -1822,7 +1822,7 @@ header .container .search-and-burger .menu-icon.clicked .dot:nth-of-type(9) {
     max-height: -webkit-max-content;
     max-height: -moz-max-content;
     max-height: max-content;
-    max-width: 400px;
+    max-width: 500px;
   }
   .container .container .stocks .body-stocks a.stock:first-child .img {
     min-width: auto;
@@ -1841,6 +1841,9 @@ header .container .search-and-burger .menu-icon.clicked .dot:nth-of-type(9) {
   }
   .container .container .stocks .body-stocks a.stock:first-child .info .date p {
     margin-bottom: 12px;
+  }
+  .cinema .container .head-cinema {
+    width: 92%;
   }
   .cinema .container .head-cinema p {
     font-size: 22px;
