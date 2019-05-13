@@ -8,6 +8,15 @@ section#main-slider
     img(src="./dist/img/jpg/index/slider.jpg")
   .slide
     img(src="./dist/img/jpg/index/slider.jpg")
+section#main-slider-mobile
+  .slide
+    img(src="./dist/img/jpg/index/slider-mobile.jpg")
+  .slide
+    img(src="./dist/img/jpg/index/slider-mobile.jpg")
+  .slide
+    img(src="./dist/img/jpg/index/slider-mobile.jpg")
+  .slide
+    img(src="./dist/img/jpg/index/slider-mobile.jpg")
 .container
   .poster
   .container
@@ -59,6 +68,9 @@ section#main-slider
             p.headline Украшения для любимых от Московского ювелирного завода!
             .date 
               p 26 февраля – 8 марта
+        .all-stocks
+          a Все акции
+            img.svg(src="./dist/img/svg/index/all-stock.svg")
 section.cinema
   .container
     .head-cinema
@@ -403,6 +415,9 @@ section.cinema
                 a.time
                   span 12:55
         img(src="./dist/img/jpg/index/humorist.jpg")
+    .all-cinema
+      a Смотреть все
+        img.svg(src="./dist/img/svg/index/all-stock-cinema.svg")
 .container
   section.developments
     .head-developments
@@ -411,7 +426,7 @@ section.cinema
         .links-right
           a.active Будущие события
           a Архив событий
-      a Все события
+      a.all-developments Все события
         img.svg(src="./dist/img/svg/index/all-stock.svg")
       .zigzag-line
     #developments-slider
@@ -487,6 +502,9 @@ section.cinema
           p.date 2 ФЕВРАЛЯ 2019
           p.headline АФИША МЕРОПРИЯТИЙ НА ФЕВРАЛЬ 2019
           p.text Афиша мероприятий на февраль 2019. Детский мастер-класс «Согреваем музыкой» концерт #всемпобарабану. «ЭтноКвиз»
+    .all-developments-mobile
+      a Все события
+        img.svg(src="./dist/img/svg/index/all-stock.svg")
   section.videos
     .head-videos
       p Видео
@@ -557,6 +575,9 @@ section.cinema
           .block-text
             p.headline Cropp
             p.text Новая коллекция Sicoer x в Cropp!
+      .all-new-items
+        a Все новинки
+          img.svg(src="./dist/img/svg/index/all-stock.svg")
   .container
     section.instagram-block
       .head-instagram
@@ -564,7 +585,7 @@ section.cinema
           p Мы в инстаграме
           .links-right
             a <img class="svg" src="./dist/img/svg/index/instagram-silver.svg"> @surgutcitymall
-        a Все фотографии
+        a.all-instagram Все фотографии
           img.svg(src="./dist/img/svg/index/all-stock.svg")
         .zigzag-line
       #instagram-slider
@@ -604,6 +625,8 @@ section.cinema
         .img
           .background
           img(src="./dist/img/jpg/index/people.jpg")
+      a.all-instagram Все фотографии
+        img.svg(src="./dist/img/svg/index/all-stock.svg")
   include include/vendor.pug 
   script(src="./dist/js/index.js")
   include include/footer.pug

@@ -9,6 +9,11 @@ $(document).ready(function() {
     nextArrow: '<div class="slick-next"><img src="./dist/img/svg/index/slick-next.svg" /></div>',
   });
 
+  $('#main-slider-mobile').slick({
+    arrows: false,
+    autoplay: true,
+  });
+
   $('#cinema-slider').slick({
     infinite: true,
     slidesToShow: 6,
@@ -39,27 +44,43 @@ $(document).ready(function() {
         centerMode: true,
       }
     },
-  ]
-  });
-
-  $('#developments-slider').slick({
-    infinite: true,
-    slidesToShow: 3,
-    autoplaySpeed: 2000,
-    adaptiveHeight: true,
-    prevArrow: '<div class="devel-prev"><img src="./dist/img/svg/index/silver-prev.svg" /></div>',
-    nextArrow: '<div class="devel-next"><img src="./dist/img/svg/index/silver-next.svg" /></div>',
-    responsive: [
     {
-      breakpoint: 1170,
+      breakpoint: 768,
       settings: {
         arrows:false,
-        slidesToShow: 3,
-        centerMode: true,
+        slidesToShow: 2,
       }
     },
   ]
   });
+
+  if ($(window).width() > 768){
+    $('#developments-slider').slick({
+      infinite: true,
+      slidesToShow: 3,
+      autoplaySpeed: 2000,
+      adaptiveHeight: true,
+      prevArrow: '<div class="devel-prev"><img src="./dist/img/svg/index/silver-prev.svg" /></div>',
+      nextArrow: '<div class="devel-next"><img src="./dist/img/svg/index/silver-next.svg" /></div>',
+      responsive: [
+      {
+        breakpoint: 1170,
+        settings: {
+          arrows:false,
+          slidesToShow: 3,
+          centerMode: true,
+        }
+      },
+    ]
+    });
+  } else {
+    var developmentSlides = $('#developments-slider').children();
+    for (var i = 0; i < developmentSlides.length; i++) {
+    	if (i >= 3) {
+        	$(developmentSlides)[i].remove();
+    	}
+    }
+  };
 
   let element = $('.body-new-items').children().length;
   switch (element) {
@@ -79,25 +100,34 @@ $(document).ready(function() {
       console.log('3');
       break;
   }
-
-  $('#instagram-slider').slick({
-    infinite: true,
-    slidesToShow: 6,
-    autoplaySpeed: 2000,
-    adaptiveHeight: true,
-    prevArrow: '<div class="instagram-prev"><img src="./dist/img/svg/index/silver-prev.svg" /></div>',
-    nextArrow: '<div class="instagram-next"><img src="./dist/img/svg/index/silver-next.svg" /></div>',
-    responsive: [
-      {
-        breakpoint: 1170,
-        settings: {
-          arrows:false,
-          slidesToShow: 4,
-          centerMode: true,
-        }
-      },
-    ]
-  });
+  
+  if ($(window).width() > 768){
+    $('#instagram-slider').slick({
+      infinite: true,
+      slidesToShow: 6,
+      autoplaySpeed: 2000,
+      adaptiveHeight: true,
+      prevArrow: '<div class="instagram-prev"><img src="./dist/img/svg/index/silver-prev.svg" /></div>',
+      nextArrow: '<div class="instagram-next"><img src="./dist/img/svg/index/silver-next.svg" /></div>',
+      responsive: [
+        {
+          breakpoint: 1170,
+          settings: {
+            arrows:false,
+            slidesToShow: 4,
+            centerMode: true,
+          }
+        },
+      ]
+    });
+  } else {
+    var instagramSlides = $('#instagram-slider').children();
+    for (var i = 0; i < instagramSlides.length; i++) {
+    	if (i >= 3) {
+        	$(instagramSlides)[i].remove();
+    	}
+    }
+  };
 
   //--FOR-FIRST-STOCK-IMG-BLOCK-TABLET--
   if ($(window).width() < 1170){

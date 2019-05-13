@@ -1,0 +1,261 @@
+@media screen and (max-device-width: 768px)
+  #main-slider
+    display: none
+  #main-slider-mobile
+    display: block
+    .slide
+      img
+        width: 100%
+  .container
+    .container
+      .stocks
+        width: 92%
+        height: max-content
+        .head-stocks
+          width: 94%
+          a
+            display: none
+          .zigzag-line
+            width: 94%
+        .body-stocks
+          flex-direction: column
+          a.stock
+            margin-top: 25px
+            max-width: 100%
+            display: flex
+            .info
+              display: flex
+            .img
+              max-width: 100%
+            &:first-child
+              max-width: 100%
+              .img
+                height: auto
+                max-width: 100%
+                max-height: 100%
+              .info
+                display: table-row
+            &:nth-child(4)
+              display: none
+          .all-stocks
+            display: flex
+            margin: 30px auto
+            justify-content: center
+            a
+              display: flex
+              transition: 0.3s
+              align-items: center
+              svg
+                margin-left: 8px
+              &:hover
+                transition: 0.3s
+                color: $yellow
+                svg
+                  path
+                    transition: 0.3s
+                    fill: $yellow
+  .cinema
+    margin-top: 80px
+    .container
+      .background-text
+        top: 35px
+        width: 80%
+        height: 70px
+        min-width: unset
+      .head-cinema
+        width: 87%
+        a
+          display: none
+      #cinema-slider
+        width: 93%
+        margin-top: 30px
+        margin-bottom: 0
+        .cinema-slide
+          max-height: unset
+      .all-cinema
+        display: flex
+        margin: 30px auto
+        justify-content: center
+        a
+          color: $white
+          display: flex
+          align-items: center
+          cursor: pointer
+          transition: 0.3s
+          &:hover
+            transition: 0.3s
+            color: $light-yellow
+            svg
+              path
+                transition: 0.3s
+                fill: $light-yellow
+          svg
+            margin-left: 8px
+            path
+              transition: 0.3s
+
+  .container
+    .developments
+      margin-top: 82px
+      .head-developments
+        width: 86%
+        .left-block
+          display: block
+          p
+            margin: 0
+          .links-right
+            margin-top: -20px
+        .zigzag-line
+          width: 86%
+          margin-top: 55px
+        a.all-developments
+          display: none
+      #developments-slider
+        flex-direction: column
+        .development-slide
+          width: 86%
+          margin: 0 auto
+          margin-bottom: 30px
+          max-width: 100%
+          max-height: unset
+          .img
+            max-width: 100%
+            max-height: unset
+            img
+              width: 100%
+      .all-developments-mobile
+        display: flex
+        margin: 30px auto
+        justify-content: center
+        a
+          display: flex
+          transition: 0.3s
+          align-items: center
+          svg
+            margin-left: 8px
+          &:hover
+            transition: 0.3s
+            color: $yellow
+            svg
+              path
+                transition: 0.3s
+                fill: $yellow
+  .container
+    .videos
+      width: 87%
+      margin-top: -185px
+      .head-videos
+        width: 99%
+        .zigzag-line
+          width: 98%
+      .body-videos
+        width: 99%
+        flex-direction: column
+        .block-video
+          margin: 0
+          max-width: 100%
+          margin-bottom: 40px
+          .img
+            max-width: 100%
+            img
+              width: 100%
+
+  .container
+    .container
+      .new-items
+        width: 87%
+        .season
+          overflow: hidden
+          img
+            width: 270%
+        .head-new-items
+          width: 100%
+          a
+            display: none
+        .body-new-items.four, .body-new-items.three, .body-new-items.two, .body-new-items.one
+          width: 99%
+          display: flex
+          max-height: unset
+          flex-direction: column
+          a.new-item
+            &:first-child
+              margin-bottom: 24px
+              .img
+                height: auto
+                max-width: 100%
+                max-height: 170px
+            &:nth-child(2)
+              margin-bottom: 24px
+              .img
+                height: auto
+                max-width: 100%
+                max-height: 170px
+            &:nth-child(3)
+              margin-bottom: 24px
+              .img
+                height: auto
+                max-width: 100%
+                max-height: 170px
+            &:nth-child(4)
+              margin-bottom: 24px
+              .img
+                height: auto
+                max-width: 100%
+                max-height: 170px
+            .img
+              img
+                height: auto
+        .all-new-items
+          display: flex
+          margin: 10px auto
+          justify-content: center
+          a
+            display: flex
+            transition: 0.3s
+            align-items: center
+            svg
+              margin-left: 8px
+            &:hover
+              transition: 0.3s
+              color: $yellow
+              svg
+                path
+                  transition: 0.3s
+                  fill: $yellow
+  .container
+    .container
+      .instagram-block
+        margin-top: 40px
+        .head-instagram
+          width: 91%
+          a.all-instagram
+            display: none
+          .left-block
+            display: block
+          .links-right
+            margin-top: -40px
+            margin-left: -7px
+          .zigzag-line
+            width: 90%
+            margin-top: 65px
+        #instagram-slider
+          flex-direction: column
+          .img
+            width: 90%
+            margin-top: 25px
+            max-width: unset
+            max-height: unset
+        a.all-instagram
+          display: flex
+          align-items: center
+          margin: 30px auto
+          justify-content: center
+          svg
+            margin-left: 8px
+          &:hover
+            transition: 0.3s
+            color: $yellow
+            svg
+              path
+                transition: 0.3s
+                fill: $yellow
