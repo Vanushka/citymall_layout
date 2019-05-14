@@ -44,7 +44,8 @@ $(document).ready(function() {
       breakpoint: 768,
       settings: {
         arrows:false,
-        slidesToShow: 2,
+        slidesToShow: 1,
+        centerMode: true,
       }
     },
   ]
