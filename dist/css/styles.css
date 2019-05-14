@@ -308,7 +308,10 @@ header .container .search-and-burger .menu-icon.clicked .dot:nth-of-type(9) {
 @media screen and (max-device-width: 768px) {
   header .container .mode-and-social,
   header .container .search {
-    display: none;
+    opacity: 0;
+  }
+  header .container .search-and-burger {
+    margin-right: 0;
   }
   header .container .search-and-burger .menu-icon {
     margin-left: 0;

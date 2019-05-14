@@ -1,4 +1,9 @@
 $(document).ready(function() {
+  $('.menu-icon').click(function(){
+    $(this).toggleClass('clicked');
+  });
+
+  
   jQuery('img.svg').each(function(){
       var $img = jQuery(this);
       var imgID = $img.attr('id');

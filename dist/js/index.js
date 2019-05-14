@@ -1,8 +1,4 @@
 $(document).ready(function() {
-  $('.menu-icon').click(function(){
-    $(this).toggleClass('clicked');
-  });
-
   $('#main-slider').slick({
     autoplay: true,
     prevArrow: '<div class="slick-prev"><img src="./dist/img/svg/index/slick-prev.svg" /></div>',
@@ -100,7 +96,7 @@ $(document).ready(function() {
       console.log('3');
       break;
   }
-  
+
   if ($(window).width() > 768){
     $('#instagram-slider').slick({
       infinite: true,
