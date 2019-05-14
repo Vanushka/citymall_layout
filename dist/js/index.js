@@ -41,7 +41,7 @@ $(document).ready(function() {
       }
     },
     {
-      breakpoint: 768,
+      breakpoint: 767,
       settings: {
         arrows:false,
         slidesToShow: 1,
@@ -51,7 +51,7 @@ $(document).ready(function() {
   ]
   });
 
-  if ($(window).width() > 768){
+  if ($(window).width() > 767){
     $('#developments-slider').slick({
       infinite: true,
       slidesToShow: 3,
@@ -98,7 +98,7 @@ $(document).ready(function() {
       break;
   }
 
-  if ($(window).width() > 768){
+  if ($(window).width() > 767){
     $('#instagram-slider').slick({
       infinite: true,
       slidesToShow: 6,
