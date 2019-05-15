@@ -44,6 +44,11 @@ header {
   height: 110px;
   display: -ms-flexbox;
   display: flex;
+  transition: 0.3s;
+}
+header.active {
+  transition: 0.3s;
+  background: #f6120d;
 }
 header .container {
   width: 100%;
@@ -81,6 +86,17 @@ header .container .links-block a {
   padding: 0 10px;
   white-space: nowrap;
 }
+header .container .links-block a.active {
+  color: #fff;
+}
+header .container .links-block a.active svg path {
+  transition: 0.3s;
+  fill: #fff;
+}
+header .container .links-block a:hover {
+  color: #fab900;
+  transition: 0.3s;
+}
 header .container .links-block .scheme {
   display: -ms-flexbox;
   display: flex;
@@ -97,6 +113,14 @@ header .container .links-block .scheme svg {
 header .container .links-block .scheme svg path {
   transition: 0.3s;
 }
+header .container .links-block .scheme:hover {
+  color: #fab900;
+  transition: 0.3s;
+}
+header .container .links-block .scheme:hover svg path {
+  transition: 0.3s;
+  fill: #fab900;
+}
 header .container .links-block .how-to-get {
   display: -ms-flexbox;
   display: flex;
@@ -112,6 +136,14 @@ header .container .links-block .how-to-get svg {
 }
 header .container .links-block .how-to-get svg path {
   transition: 0.3s;
+}
+header .container .links-block .how-to-get:hover {
+  color: #fab900;
+  transition: 0.3s;
+}
+header .container .links-block .how-to-get:hover svg path {
+  transition: 0.3s;
+  fill: #fab900;
 }
 header .container .mode-and-social {
   display: -ms-flexbox;
@@ -134,12 +166,14 @@ header .container .mode-and-social p.operation-mode {
   -ms-flex-pack: justify;
       justify-content: space-between;
 }
-header .container .mode-and-social p.operation-mode:before {
-  content: "";
-  width: 16px;
-  height: 16px;
+header .container .mode-and-social p.operation-mode svg {
   margin-right: 8px;
-  background-image: url("../img/svg/header/clock.svg");
+}
+header .container .mode-and-social p.operation-mode.active {
+  color: #fff;
+}
+header .container .mode-and-social p.operation-mode.active svg path {
+  fill: #fff;
 }
 header .container .mode-and-social .social-links {
   padding: 0 20px;
@@ -157,6 +191,17 @@ header .container .mode-and-social .social-links .instagram {
 header .container .mode-and-social .social-links .instagram svg path {
   transition: 0.3s;
 }
+header .container .mode-and-social .social-links .instagram.active svg path {
+  fill: #fff;
+}
+header .container .mode-and-social .social-links .instagram:hover {
+  color: #fab900;
+  transition: 0.3s;
+}
+header .container .mode-and-social .social-links .instagram:hover svg path {
+  transition: 0.3s;
+  fill: #fab900;
+}
 header .container .mode-and-social .social-links .facebook {
   width: 12px;
   height: 23px;
@@ -165,6 +210,17 @@ header .container .mode-and-social .social-links .facebook {
 header .container .mode-and-social .social-links .facebook svg path {
   transition: 0.3s;
 }
+header .container .mode-and-social .social-links .facebook.active svg path {
+  fill: #fff;
+}
+header .container .mode-and-social .social-links .facebook:hover {
+  color: #fab900;
+  transition: 0.3s;
+}
+header .container .mode-and-social .social-links .facebook:hover svg path {
+  transition: 0.3s;
+  fill: #fab900;
+}
 header .container .mode-and-social .social-links .vk {
   width: 25.5px;
   height: 25.5px;
@@ -172,6 +228,17 @@ header .container .mode-and-social .social-links .vk {
 }
 header .container .mode-and-social .social-links .vk svg path {
   transition: 0.3s;
+}
+header .container .mode-and-social .social-links .vk.active svg path {
+  fill: #fff;
+}
+header .container .mode-and-social .social-links .vk:hover {
+  color: #fab900;
+  transition: 0.3s;
+}
+header .container .mode-and-social .social-links .vk:hover svg path {
+  transition: 0.3s;
+  fill: #fab900;
 }
 header .container .search-and-burger {
   display: -ms-flexbox;
@@ -191,6 +258,17 @@ header .container .search-and-burger .search {
 header .container .search-and-burger .search svg path {
   transition: 0.3s;
 }
+header .container .search-and-burger .search.active svg path {
+  fill: #fff;
+}
+header .container .search-and-burger .search:hover {
+  color: #fab900;
+  transition: 0.3s;
+}
+header .container .search-and-burger .search:hover svg path {
+  transition: 0.3s;
+  fill: #fab900;
+}
 header .container .search-and-burger .menu-icon {
   position: absolute;
   width: 21px;
@@ -198,10 +276,6 @@ header .container .search-and-burger .menu-icon {
   margin-left: 50px;
   cursor: pointer;
   transition: 0.3s;
-}
-header .container .search-and-burger .menu-icon:hover .dot {
-  transition: 0.3s;
-  background: #fab900;
 }
 header .container .search-and-burger .menu-icon .dot {
   position: absolute;
@@ -248,6 +322,7 @@ header .container .search-and-burger .menu-icon .dot:nth-of-type(9) {
   margin-left: 6.5px;
 }
 header .container .search-and-burger .menu-icon.clicked .dot {
+  background: #fff;
   transition: margin 0.4s ease, width 0.4s ease 0.4s;
   height: 2px;
   margin-left: 0;
@@ -285,6 +360,10 @@ header .container .search-and-burger .menu-icon.clicked .dot:nth-of-type(8) {
 header .container .search-and-burger .menu-icon.clicked .dot:nth-of-type(9) {
   height: 1px;
   margin-top: 0;
+}
+header .container .search-and-burger .menu-icon:hover .dot {
+  transition: 0.3s;
+  background: #fab900;
 }
 @media screen and (max-device-width: 1170px) {
   header {

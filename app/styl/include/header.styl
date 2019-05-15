@@ -2,6 +2,10 @@ header
   width: 100%
   height: 110px
   display: flex
+  transition: .3s
+  &.active
+    transition: .3s
+    background: $red
   .container
     width: 100%
     margin: 0 auto
@@ -27,6 +31,15 @@ header
       a
         padding: 0 10px
         white-space: nowrap
+        &.active
+          svg
+            path
+              transition: .3s
+              fill: $white
+          color: $white
+        &:hover
+          color: $yellow
+          transition: .3s
       .scheme
         display: flex
         cursor: pointer
@@ -38,6 +51,13 @@ header
           margin-right: 8px
           path
             transition: .3s
+        &:hover
+          color: $yellow
+          transition: .3s
+          svg
+            path
+              transition: .3s
+              fill: $yellow
       .how-to-get
         display: flex
         cursor: pointer
@@ -49,6 +69,13 @@ header
           margin-right: 8px
           path
             transition: .3s
+        &:hover
+          color: $yellow
+          transition: .3s
+          svg
+            path
+              transition: .3s
+              fill: $yellow
     .mode-and-social
       display: flex
       width: 100%
@@ -62,12 +89,13 @@ header
         position: relative
         align-items: center
         justify-content: space-between
-        &:before
-          content ""
-          width: 16px
-          height: 16px
+        svg
           margin-right: 8px
-          background-image: url(../img/svg/header/clock.svg)
+        &.active
+          color: $white
+          svg
+            path
+              fill: $white
       .social-links
         padding: 0 20px
         display: flex
@@ -79,6 +107,17 @@ header
           svg
             path
               transition: .3s
+          &.active
+            svg
+              path
+                fill: $white
+          &:hover
+            color: $yellow
+            transition: .3s
+            svg
+              path
+                transition: .3s
+                fill: $yellow
         .facebook
           width: 12px
           height: 23px
@@ -86,6 +125,17 @@ header
           svg
             path
               transition: .3s
+          &.active
+            svg
+              path
+                fill: $white
+          &:hover
+            color: $yellow
+            transition: .3s
+            svg
+              path
+                transition: .3s
+                fill: $yellow
         .vk
           width: 25.5px
           height: 25.5px
@@ -93,6 +143,17 @@ header
           svg
             path
               transition: .3s
+          &.active
+            svg
+              path
+                fill: $white
+          &:hover
+            color: $yellow
+            transition: .3s
+            svg
+              path
+                transition: .3s
+                fill: $yellow
     .search-and-burger
       display: flex
       margin-right: 60px
@@ -106,6 +167,17 @@ header
         svg
           path
             transition: .3s
+        &.active
+          svg
+            path
+              fill: $white
+        &:hover
+          color: $yellow
+          transition: .3s
+          svg
+            path
+              transition: .3s
+              fill: $yellow
       .menu-icon
         position: absolute
         width: 21px
@@ -113,10 +185,6 @@ header
         margin-left: 50px
         cursor: pointer
         transition: .3s
-        &:hover
-          .dot
-            transition: .3s
-            background: $yellow
         .dot
           position: absolute
           top: 50%
@@ -163,6 +231,7 @@ header
             margin-left: 6.5px
         &.clicked
           .dot
+            background: $white
             -webkit-transition: margin 0.4s ease, width 0.4s ease 0.4s
             -moz-transition: margin 0.4s ease, width 0.4s ease 0.4s
             -o-transition: margin 0.4s ease, width 0.4s ease 0.4s
@@ -195,3 +264,7 @@ header
             &:nth-of-type(9)
               height: 1px
               margin-top: 0
+        &:hover
+          .dot
+            transition: .3s
+            background: $yellow
