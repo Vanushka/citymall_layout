@@ -13,15 +13,11 @@ $(document).ready(function() {
     $('.facebook').toggleClass('active');
     $('.vk').toggleClass('active');
     $('.links-block a').toggleClass('active');
-    // if ($('a.scheme svg path').css('fill') != "rgb(255, 255, 255)" && $('a.how-to-get svg path').css('fill') != "rgb(255, 255, 255)") {
-    //   $('a.scheme svg path').css('fill', 'rgb(255, 255, 255)');
-    //   $('a.how-to-get svg path').css('fill', 'rgb(255, 255, 255)');
-    // } else {
-    //   $('a.scheme svg path').css('fill', '#484848');
-    //   $('a.how-to-get svg path').css('fill', '#484848');
-    // };
     $('p.operation-mode').toggleClass('active');
     $('.search').toggleClass('active');
+    $('.menu-header').toggleClass('active');
+    $('.background-menu').toggleClass('active');
+    $('body').toggleClass('locked');
   });
 
 

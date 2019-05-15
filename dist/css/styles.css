@@ -1,6 +1,9 @@
 body {
   margin: 0;
 }
+body.locked {
+  overflow: hidden;
+}
 a {
   cursor: pointer;
   color: #484848;
@@ -45,6 +48,7 @@ header {
   display: -ms-flexbox;
   display: flex;
   transition: 0.3s;
+  border-bottom: 1px solid #fff;
 }
 header.active {
   transition: 0.3s;
@@ -362,8 +366,76 @@ header .container .search-and-burger .menu-icon.clicked .dot:nth-of-type(9) {
   margin-top: 0;
 }
 header .container .search-and-burger .menu-icon:hover .dot {
-  transition: 0.3s;
   background: #fab900;
+}
+.menu-header {
+  width: 100%;
+  z-index: 3;
+  height: 135px;
+  display: none;
+  transition: 0.3s;
+  background: #f6120d;
+  position: absolute;
+}
+.menu-header:after {
+  content: "";
+  background: linear-gradient(-35deg, transparent 16px, #f6120d 0), linear-gradient(35deg, transparent 16px, #f6120d 0);
+  background-repeat: repeat-x;
+  background-position: left bottom;
+  background-size: 22px 32px;
+  display: block;
+  width: 100%;
+  height: 32px;
+  z-index: 1;
+  position: absolute;
+  bottom: -15px;
+  left: 0px;
+}
+.menu-header.active {
+  display: -ms-flexbox;
+  display: flex;
+  transition: 0.3s;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+.menu-header .links-block {
+  width: 100%;
+  padding: 0 15px;
+  max-width: 930px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.menu-header .links-block a {
+  padding: 0 10px;
+  color: #fff;
+  white-space: nowrap;
+}
+.menu-header .links-block a.active {
+  color: #fff;
+}
+.menu-header .links-block a.active svg path {
+  transition: 0.3s;
+  fill: #fff;
+}
+.menu-header .links-block a:hover {
+  color: #fab900;
+  transition: 0.3s;
+}
+.background-menu {
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  z-index: 2;
+  display: none;
+  position: absolute;
+  background: #000;
+}
+.background-menu.active {
+  display: block;
 }
 @media screen and (max-device-width: 1170px) {
   header {
