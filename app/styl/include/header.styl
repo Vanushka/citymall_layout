@@ -157,6 +157,7 @@ header
                 fill: $yellow
     .search-and-burger
       display: flex
+      width: 48px
       margin-right: 60px
       align-items: center
       justify-content: space-between
@@ -179,6 +180,40 @@ header
             path
               transition: .3s
               fill: $yellow
+        &.hide
+          display: none
+      .close
+        cursor: pointer
+        width: 18.49px
+        height: 19.15px
+        margin-right: 30px
+        &:before
+          content: ""
+          height: 2px
+          width: 22px
+          right: 0
+          margin-top: 10px
+          display: block
+          margin-left: -2px
+          background: $white
+          border-radius: 2px
+          transform: rotate(45deg)
+        &:after
+          content: ""
+          height: 2px
+          width: 22px
+          right: 0
+          margin-top: -2px
+          display: block
+          margin-left: -2px
+          background: $white
+          border-radius: 2px
+          transform: rotate(135deg)
+        &.hide
+          display: none
+        &:hover
+          &:before, &:after
+            background: $yellow
       .menu-icon
         position: absolute
         width: 21px
@@ -265,9 +300,14 @@ header
             &:nth-of-type(9)
               height: 1px
               margin-top: 0
+        &.hide
+          display: none
         &:hover
           .dot
             background: $yellow
+        &.search-active
+          .dot
+            background: $white
 .menu-header
   width: 100%
   z-index: 3
@@ -294,6 +334,8 @@ header
     transition: .3s
     align-items: center
     justify-content: center
+  .tablet-menu
+    display: none
   .links-block
     width: 100%
     padding: 0 15px
@@ -313,6 +355,42 @@ header
       &:hover
         color: $yellow
         transition: .3s
+    .scheme
+      display: none
+      cursor: pointer
+      position: relative
+      align-items: center
+      svg
+        width: 13px
+        height: 17px
+        margin-right: 8px
+        path
+          transition: .3s
+      &:hover
+        color: $yellow
+        transition: .3s
+        svg
+          path
+            transition: .3s
+            fill: $yellow
+    .how-to-get
+      display: none
+      cursor: pointer
+      position: relative
+      align-items: center
+      svg
+        width: 17px
+        height: 17px
+        margin-right: 8px
+        path
+          transition: .3s
+      &:hover
+        color: $yellow
+        transition: .3s
+        svg
+          path
+            transition: .3s
+            fill: $yellow
 .background-menu
   width: 100%
   height: 100%
@@ -321,5 +399,89 @@ header
   display: none
   position: absolute
   background: $black
+  &.active
+    display: block
+.search-header
+  width: 100%
+  z-index: 3
+  height: 135px
+  display: none
+  transition: .3s
+  background: $red
+  position: absolute
+  &:after
+    content: ""
+    background: linear-gradient(-35deg, transparent 16px, $red 0), linear-gradient(35deg, transparent 16px, $red 0)
+    background-repeat: repeat-x
+    background-position: left bottom
+    background-size: 22px 32px
+    display: block
+    width: 100%
+    height: 32px
+    z-index: 1
+    position: absolute
+    bottom: -15px
+    left: 0px
+  &.active
+    display: flex
+    transition: .3s
+    align-items: center
+    justify-content: center
+  .block-search
+    display: flex
+    align-items: center
+    p
+      color: $white
+      font-family: 'GothamPro-Medium'
+      font-size: 44px
+    form
+      display: flex
+      margin-left: 35px
+      .magnifier
+        display: none
+      input
+        width: 662px
+        height: 40px
+        outline: none
+        transition: .3s
+        background: none
+        border-radius: 20px
+        box-sizing: border-box
+        border: 1px solid $white
+        // &:hover
+        //   transition: .3s
+        //   border: 1px solid $yellow
+        //   transition: .3s
+      input[type="text"]
+        color: $white
+        font-size: 13px
+        padding-left: 20px
+      ::placeholder
+        transition: .3s
+        opacity: 0.6
+        color: $white
+      button
+        width: 200px
+        height: 40px
+        outline: none
+        color: $white
+        transition: .3s
+        cursor: pointer
+        font-size: 13px
+        background: none
+        margin-left: 10px
+        border-radius: 20px
+        border: 2px solid $white
+        &:hover
+          color: $yellow
+          transition: .3s
+          border: 2px solid $yellow
+.background-search
+  width: 100%
+  height: 100%
+  z-index: 2
+  display: none
+  position: absolute
+  background: $white
   &.active
     display: block

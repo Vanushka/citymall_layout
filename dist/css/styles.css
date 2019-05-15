@@ -247,6 +247,7 @@ header .container .mode-and-social .social-links .vk:hover svg path {
 header .container .search-and-burger {
   display: -ms-flexbox;
   display: flex;
+  width: 48px;
   margin-right: 60px;
   -ms-flex-align: center;
       align-items: center;
@@ -272,6 +273,48 @@ header .container .search-and-burger .search:hover {
 header .container .search-and-burger .search:hover svg path {
   transition: 0.3s;
   fill: #fab900;
+}
+header .container .search-and-burger .search.hide {
+  display: none;
+}
+header .container .search-and-burger .close {
+  cursor: pointer;
+  width: 18.49px;
+  height: 19.15px;
+  margin-right: 30px;
+}
+header .container .search-and-burger .close:before {
+  content: "";
+  height: 2px;
+  width: 22px;
+  right: 0;
+  margin-top: 10px;
+  display: block;
+  margin-left: -2px;
+  background: #fff;
+  border-radius: 2px;
+  -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+}
+header .container .search-and-burger .close:after {
+  content: "";
+  height: 2px;
+  width: 22px;
+  right: 0;
+  margin-top: -2px;
+  display: block;
+  margin-left: -2px;
+  background: #fff;
+  border-radius: 2px;
+  -ms-transform: rotate(135deg);
+      transform: rotate(135deg);
+}
+header .container .search-and-burger .close.hide {
+  display: none;
+}
+header .container .search-and-burger .close:hover:before,
+header .container .search-and-burger .close:hover:after {
+  background: #fab900;
 }
 header .container .search-and-burger .menu-icon {
   position: absolute;
@@ -365,8 +408,14 @@ header .container .search-and-burger .menu-icon.clicked .dot:nth-of-type(9) {
   height: 1px;
   margin-top: 0;
 }
+header .container .search-and-burger .menu-icon.hide {
+  display: none;
+}
 header .container .search-and-burger .menu-icon:hover .dot {
   background: #fab900;
+}
+header .container .search-and-burger .menu-icon.search-active .dot {
+  background: #fff;
 }
 .menu-header {
   width: 100%;
@@ -400,6 +449,9 @@ header .container .search-and-burger .menu-icon:hover .dot {
   -ms-flex-pack: center;
       justify-content: center;
 }
+.menu-header .tablet-menu {
+  display: none;
+}
 .menu-header .links-block {
   width: 100%;
   padding: 0 15px;
@@ -425,6 +477,52 @@ header .container .search-and-burger .menu-icon:hover .dot {
   color: #fab900;
   transition: 0.3s;
 }
+.menu-header .links-block .scheme {
+  display: none;
+  cursor: pointer;
+  position: relative;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.menu-header .links-block .scheme svg {
+  width: 13px;
+  height: 17px;
+  margin-right: 8px;
+}
+.menu-header .links-block .scheme svg path {
+  transition: 0.3s;
+}
+.menu-header .links-block .scheme:hover {
+  color: #fab900;
+  transition: 0.3s;
+}
+.menu-header .links-block .scheme:hover svg path {
+  transition: 0.3s;
+  fill: #fab900;
+}
+.menu-header .links-block .how-to-get {
+  display: none;
+  cursor: pointer;
+  position: relative;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.menu-header .links-block .how-to-get svg {
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+}
+.menu-header .links-block .how-to-get svg path {
+  transition: 0.3s;
+}
+.menu-header .links-block .how-to-get:hover {
+  color: #fab900;
+  transition: 0.3s;
+}
+.menu-header .links-block .how-to-get:hover svg path {
+  transition: 0.3s;
+  fill: #fab900;
+}
 .background-menu {
   width: 100%;
   height: 100%;
@@ -436,6 +534,130 @@ header .container .search-and-burger .menu-icon:hover .dot {
 }
 .background-menu.active {
   display: block;
+}
+.search-header {
+  width: 100%;
+  z-index: 3;
+  height: 135px;
+  display: none;
+  transition: 0.3s;
+  background: #f6120d;
+  position: absolute;
+}
+.search-header:after {
+  content: "";
+  background: linear-gradient(-35deg, transparent 16px, #f6120d 0), linear-gradient(35deg, transparent 16px, #f6120d 0);
+  background-repeat: repeat-x;
+  background-position: left bottom;
+  background-size: 22px 32px;
+  display: block;
+  width: 100%;
+  height: 32px;
+  z-index: 1;
+  position: absolute;
+  bottom: -15px;
+  left: 0px;
+}
+.search-header.active {
+  display: -ms-flexbox;
+  display: flex;
+  transition: 0.3s;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+.search-header .block-search {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.search-header .block-search p {
+  color: #fff;
+  font-family: 'GothamPro-Medium';
+  font-size: 44px;
+}
+.search-header .block-search form {
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 35px;
+}
+.search-header .block-search form .magnifier {
+  display: none;
+}
+.search-header .block-search form input {
+  width: 662px;
+  height: 40px;
+  outline: none;
+  transition: 0.3s;
+  background: none;
+  border-radius: 20px;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+}
+.search-header .block-search form input[type="text"] {
+  color: #fff;
+  font-size: 13px;
+  padding-left: 20px;
+}
+.search-header .block-search form ::-webkit-input-placeholder {
+  transition: 0.3s;
+  opacity: 0.6;
+  color: #fff;
+}
+.search-header .block-search form :-ms-input-placeholder {
+  transition: 0.3s;
+  opacity: 0.6;
+  color: #fff;
+}
+.search-header .block-search form ::placeholder {
+  transition: 0.3s;
+  opacity: 0.6;
+  color: #fff;
+}
+.search-header .block-search form button {
+  width: 200px;
+  height: 40px;
+  outline: none;
+  color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 13px;
+  background: none;
+  margin-left: 10px;
+  border-radius: 20px;
+  border: 2px solid #fff;
+}
+.search-header .block-search form button:hover {
+  color: #fab900;
+  transition: 0.3s;
+  border: 2px solid #fab900;
+}
+.background-search {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: none;
+  position: absolute;
+  background: #fff;
+}
+.background-search.active {
+  display: block;
+}
+@media screen and (max-device-width: 1320px) {
+  header .container .search-and-burger .menu-icon {
+    width: 22px;
+  }
+  .container .links-block a.scheme,
+  .container .links-block a.how-to-get {
+    display: none;
+  }
+  .menu-header .links-block a.scheme,
+  .menu-header .links-block a.how-to-get {
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 @media screen and (max-device-width: 1170px) {
   header {
@@ -454,6 +676,120 @@ header .container .search-and-burger .menu-icon:hover .dot {
     margin-right: 48px;
     -ms-flex-direction: row-reverse;
         flex-direction: row-reverse;
+  }
+  .menu-header .tablet-menu {
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    height: 70px;
+    display: -ms-flexbox;
+    display: flex;
+    transition: 0.3s;
+    background: #f6120d;
+    position: absolute;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    border-bottom: 1px solid #fff;
+  }
+  .menu-header .tablet-menu a {
+    padding: 0 16px;
+    color: #fff;
+    white-space: nowrap;
+  }
+  .menu-header .tablet-menu a:hover {
+    color: #fab900;
+    transition: 0.3s;
+  }
+  .menu-header .tablet-menu .scheme {
+    display: -ms-flexbox;
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+  .menu-header .tablet-menu .scheme svg {
+    width: 13px;
+    height: 17px;
+    margin-right: 8px;
+  }
+  .menu-header .tablet-menu .scheme svg path {
+    fill: #fff;
+    transition: 0.3s;
+  }
+  .menu-header .tablet-menu .scheme:hover {
+    color: #fab900;
+    transition: 0.3s;
+  }
+  .menu-header .tablet-menu .scheme:hover svg path {
+    transition: 0.3s;
+    fill: #fab900;
+  }
+  .menu-header .tablet-menu .how-to-get {
+    display: -ms-flexbox;
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+  .menu-header .tablet-menu .how-to-get svg {
+    width: 17px;
+    height: 17px;
+    margin-right: 8px;
+  }
+  .menu-header .tablet-menu .how-to-get svg path {
+    fill: #fff;
+    transition: 0.3s;
+  }
+  .menu-header .tablet-menu .how-to-get:hover {
+    color: #fab900;
+    transition: 0.3s;
+  }
+  .menu-header .tablet-menu .how-to-get:hover svg path {
+    transition: 0.3s;
+    fill: #fab900;
+  }
+  .menu-header .links-block {
+    margin-top: 75px;
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  .menu-header .links-block a {
+    padding: 0 18px;
+  }
+  .menu-header .links-block .scheme,
+  .menu-header .links-block .how-to-get {
+    display: none !important;
+  }
+  .search-header .block-search p {
+    font-size: 32px;
+  }
+  .search-header .block-search form .magnifier {
+    width: 13.66px;
+    height: 14.15px;
+    display: block;
+  }
+  .search-header .block-search form .magnifier svg {
+    opacity: 0.6;
+    width: 16px;
+    margin-top: 9px;
+    margin-left: 29px;
+  }
+  .search-header .block-search form .magnifier svg path {
+    fill: #fff;
+  }
+  .search-header .block-search form input {
+    width: 598px;
+    height: 36px;
+  }
+  .search-header .block-search form input[type="text"] {
+    padding-left: 40px;
+  }
+  .search-header .block-search form button {
+    display: none;
   }
 }
 @media screen and (max-device-width: 767px) {
@@ -1948,10 +2284,6 @@ header .container .search-and-burger .menu-icon:hover .dot {
   }
 }
 @media screen and (max-device-width: 1320px) {
-  .container .links-block a.scheme,
-  .container .links-block a.how-to-get {
-    display: none;
-  }
   .cinema .container #cinema-slider .cinema-slide .info .block-inside .sessions {
     margin-top: 20%;
   }
