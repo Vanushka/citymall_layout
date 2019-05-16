@@ -315,6 +315,8 @@ header
   display: none
   transition: .3s
   background: $red
+  overflow-y: scroll
+  overflow-x: hidden
   position: absolute
   &:after
     content: ""
@@ -334,13 +336,105 @@ header
     transition: .3s
     align-items: center
     justify-content: center
+  p.operation-mode
+    top: 7px
+    left: 11px
+    padding: 0 10px
+    display: none
+    white-space: nowrap
+    position: absolute
+    align-items: center
+    justify-content: space-between
+    svg
+      margin-right: 8px
+    &.active
+      color: $white
+      svg
+        path
+          fill: $white
+  .social-links
+    left: 0
+    top: 65px
+    display: none
+    padding: 0 20px
+    align-items: center
+    position: absolute
+    justify-content: start
+    .instagram
+      width: 21.78px
+      height: 21.78px
+      svg
+        path
+          fill: $white
+          transition: .3s
+      &:hover
+        color: $yellow
+        transition: .3s
+        svg
+          path
+            transition: .3s
+            fill: $yellow
+    .facebook
+      width: 12px
+      height: 23px
+      margin-left: 25px
+      svg
+        path
+          fill: $white
+          transition: .3s
+      &:hover
+        color: $yellow
+        transition: .3s
+        svg
+          path
+            transition: .3s
+            fill: $yellow
+    .vk
+      width: 25.5px
+      height: 25.5px
+      margin-left: 25px
+      svg
+        path
+          fill: $white
+          transition: .3s
+      &:hover
+        color: $yellow
+        transition: .3s
+        svg
+          path
+            transition: .3s
+            fill: $yellow
+  .search
+    left: -2px
+    top: 130px
+    display: none
+    cursor: pointer
+    width: 18.49px
+    height: 19.15px
+    margin-left: 25px
+    margin-right: 30px
+    position: absolute
+    svg
+      path
+        fill: $white
+        transition: .3s
+    &:hover
+      color: $yellow
+      transition: .3s
+      svg
+        path
+          transition: .3s
+          fill: $yellow
   .tablet-menu
     display: none
+  .center-line
+    display: none
   .links-block
+    left: 0
     width: 100%
+    display: flex
     padding: 0 15px
     max-width: 930px
-    display: flex
     justify-content: space-around
     a
       padding: 0 10px

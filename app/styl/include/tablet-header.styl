@@ -25,51 +25,71 @@
       align-items: center
       justify-content: center
       border-bottom: 1px solid $white
-      a
-        padding: 0 16px
-        color: $white
-        white-space: nowrap
-        &:hover
-          color: $yellow
-          transition: .3s
-      .scheme
+      .block-menu
         display: flex
-        cursor: pointer
-        position: relative
         align-items: center
-        svg
-          width: 13px
-          height: 17px
-          margin-right: 8px
-          path
-            fill: $white
+        justify-content: space-between
+        a
+          padding: 0 16px
+          color: $white
+          white-space: nowrap
+          &:hover
+            color: $yellow
             transition: .3s
-        &:hover
-          color: $yellow
-          transition: .3s
-          svg
-            path
-              transition: .3s
-              fill: $yellow
-      .how-to-get
+      .scheme-and-howtoget
         display: flex
-        cursor: pointer
-        position: relative
         align-items: center
-        svg
-          width: 17px
-          height: 17px
-          margin-right: 8px
-          path
-            fill: $white
+        justify-content: space-between
+        a.scheme
+          display: flex
+          cursor: pointer
+          position: relative
+          align-items: center
+          padding: 0 16px
+          color: $white
+          white-space: nowrap
+          &:hover
+            color: $yellow
             transition: .3s
-        &:hover
-          color: $yellow
-          transition: .3s
           svg
+            width: 13px
+            height: 17px
+            margin-right: 8px
             path
+              fill: $white
               transition: .3s
-              fill: $yellow
+          &:hover
+            color: $yellow
+            transition: .3s
+            svg
+              path
+                transition: .3s
+                fill: $yellow
+        a.how-to-get
+          display: flex
+          cursor: pointer
+          position: relative
+          align-items: center
+          padding: 0 16px
+          color: $white
+          white-space: nowrap
+          &:hover
+            color: $yellow
+            transition: .3s
+          svg
+            width: 17px
+            height: 17px
+            margin-right: 8px
+            path
+              fill: $white
+              transition: .3s
+          &:hover
+            color: $yellow
+            transition: .3s
+            svg
+              path
+                transition: .3s
+                fill: $yellow
     .links-block
       margin-top: 75px
       justify-content: center

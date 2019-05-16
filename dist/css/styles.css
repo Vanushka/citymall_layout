@@ -424,6 +424,8 @@ header .container .search-and-burger .menu-icon.search-active .dot {
   display: none;
   transition: 0.3s;
   background: #f6120d;
+  overflow-y: scroll;
+  overflow-x: hidden;
   position: absolute;
 }
 .menu-header:after {
@@ -449,15 +451,124 @@ header .container .search-and-burger .menu-icon.search-active .dot {
   -ms-flex-pack: center;
       justify-content: center;
 }
+.menu-header p.operation-mode {
+  top: 7px;
+  left: 11px;
+  padding: 0 10px;
+  display: none;
+  white-space: nowrap;
+  position: absolute;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.menu-header p.operation-mode svg {
+  margin-right: 8px;
+}
+.menu-header p.operation-mode.active {
+  color: #fff;
+}
+.menu-header p.operation-mode.active svg path {
+  fill: #fff;
+}
+.menu-header .social-links {
+  left: 0;
+  top: 65px;
+  display: none;
+  padding: 0 20px;
+  -ms-flex-align: center;
+      align-items: center;
+  position: absolute;
+  -ms-flex-pack: start;
+      justify-content: start;
+}
+.menu-header .social-links .instagram {
+  width: 21.78px;
+  height: 21.78px;
+}
+.menu-header .social-links .instagram svg path {
+  fill: #fff;
+  transition: 0.3s;
+}
+.menu-header .social-links .instagram:hover {
+  color: #fab900;
+  transition: 0.3s;
+}
+.menu-header .social-links .instagram:hover svg path {
+  transition: 0.3s;
+  fill: #fab900;
+}
+.menu-header .social-links .facebook {
+  width: 12px;
+  height: 23px;
+  margin-left: 25px;
+}
+.menu-header .social-links .facebook svg path {
+  fill: #fff;
+  transition: 0.3s;
+}
+.menu-header .social-links .facebook:hover {
+  color: #fab900;
+  transition: 0.3s;
+}
+.menu-header .social-links .facebook:hover svg path {
+  transition: 0.3s;
+  fill: #fab900;
+}
+.menu-header .social-links .vk {
+  width: 25.5px;
+  height: 25.5px;
+  margin-left: 25px;
+}
+.menu-header .social-links .vk svg path {
+  fill: #fff;
+  transition: 0.3s;
+}
+.menu-header .social-links .vk:hover {
+  color: #fab900;
+  transition: 0.3s;
+}
+.menu-header .social-links .vk:hover svg path {
+  transition: 0.3s;
+  fill: #fab900;
+}
+.menu-header .search {
+  left: -2px;
+  top: 130px;
+  display: none;
+  cursor: pointer;
+  width: 18.49px;
+  height: 19.15px;
+  margin-left: 25px;
+  margin-right: 30px;
+  position: absolute;
+}
+.menu-header .search svg path {
+  fill: #fff;
+  transition: 0.3s;
+}
+.menu-header .search:hover {
+  color: #fab900;
+  transition: 0.3s;
+}
+.menu-header .search:hover svg path {
+  transition: 0.3s;
+  fill: #fab900;
+}
 .menu-header .tablet-menu {
   display: none;
 }
+.menu-header .center-line {
+  display: none;
+}
 .menu-header .links-block {
+  left: 0;
   width: 100%;
-  padding: 0 15px;
-  max-width: 930px;
   display: -ms-flexbox;
   display: flex;
+  padding: 0 15px;
+  max-width: 930px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
@@ -693,62 +804,92 @@ header .container .search-and-burger .menu-icon.search-active .dot {
         justify-content: center;
     border-bottom: 1px solid #fff;
   }
-  .menu-header .tablet-menu a {
+  .menu-header .tablet-menu .block-menu {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+  }
+  .menu-header .tablet-menu .block-menu a {
     padding: 0 16px;
     color: #fff;
     white-space: nowrap;
   }
-  .menu-header .tablet-menu a:hover {
+  .menu-header .tablet-menu .block-menu a:hover {
     color: #fab900;
     transition: 0.3s;
   }
-  .menu-header .tablet-menu .scheme {
+  .menu-header .tablet-menu .scheme-and-howtoget {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+  }
+  .menu-header .tablet-menu .scheme-and-howtoget a.scheme {
     display: -ms-flexbox;
     display: flex;
     cursor: pointer;
     position: relative;
     -ms-flex-align: center;
         align-items: center;
+    padding: 0 16px;
+    color: #fff;
+    white-space: nowrap;
   }
-  .menu-header .tablet-menu .scheme svg {
+  .menu-header .tablet-menu .scheme-and-howtoget a.scheme:hover {
+    color: #fab900;
+    transition: 0.3s;
+  }
+  .menu-header .tablet-menu .scheme-and-howtoget a.scheme svg {
     width: 13px;
     height: 17px;
     margin-right: 8px;
   }
-  .menu-header .tablet-menu .scheme svg path {
+  .menu-header .tablet-menu .scheme-and-howtoget a.scheme svg path {
     fill: #fff;
     transition: 0.3s;
   }
-  .menu-header .tablet-menu .scheme:hover {
+  .menu-header .tablet-menu .scheme-and-howtoget a.scheme:hover {
     color: #fab900;
     transition: 0.3s;
   }
-  .menu-header .tablet-menu .scheme:hover svg path {
+  .menu-header .tablet-menu .scheme-and-howtoget a.scheme:hover svg path {
     transition: 0.3s;
     fill: #fab900;
   }
-  .menu-header .tablet-menu .how-to-get {
+  .menu-header .tablet-menu .scheme-and-howtoget a.how-to-get {
     display: -ms-flexbox;
     display: flex;
     cursor: pointer;
     position: relative;
     -ms-flex-align: center;
         align-items: center;
+    padding: 0 16px;
+    color: #fff;
+    white-space: nowrap;
   }
-  .menu-header .tablet-menu .how-to-get svg {
+  .menu-header .tablet-menu .scheme-and-howtoget a.how-to-get:hover {
+    color: #fab900;
+    transition: 0.3s;
+  }
+  .menu-header .tablet-menu .scheme-and-howtoget a.how-to-get svg {
     width: 17px;
     height: 17px;
     margin-right: 8px;
   }
-  .menu-header .tablet-menu .how-to-get svg path {
+  .menu-header .tablet-menu .scheme-and-howtoget a.how-to-get svg path {
     fill: #fff;
     transition: 0.3s;
   }
-  .menu-header .tablet-menu .how-to-get:hover {
+  .menu-header .tablet-menu .scheme-and-howtoget a.how-to-get:hover {
     color: #fab900;
     transition: 0.3s;
   }
-  .menu-header .tablet-menu .how-to-get:hover svg path {
+  .menu-header .tablet-menu .scheme-and-howtoget a.how-to-get:hover svg path {
     transition: 0.3s;
     fill: #fab900;
   }
@@ -802,8 +943,126 @@ header .container .search-and-burger .menu-icon.search-active .dot {
   header .container .search-and-burger {
     margin-right: 0;
   }
+  header .container .search-and-burger .close {
+    right: 23px;
+    margin-right: 0;
+    position: absolute;
+  }
   header .container .search-and-burger .menu-icon {
+    right: 21px;
+    z-index: 3;
     margin-left: 0;
+  }
+  .background-menu {
+    top: 0;
+  }
+  .menu-header {
+    top: 0;
+    width: 250px;
+    height: -webkit-fill-available;
+  }
+  .menu-header:after {
+    width: 1000px;
+    position: fixed;
+    -ms-transform: rotate(270deg);
+        transform: rotate(270deg);
+    left: -248px;
+    bottom: unset;
+  }
+  .menu-header p.operation-mode {
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .menu-header .social-links {
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .menu-header .search {
+    display: block;
+  }
+  .menu-header .tablet-menu {
+    margin-top: 165px;
+    padding-bottom: 20px;
+    border-bottom: none;
+    -ms-flex-align: end !important;
+        align-items: end !important;
+    height: -webkit-max-content !important;
+    height: -moz-max-content !important;
+    height: max-content !important;
+    -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+  }
+  .menu-header .tablet-menu a {
+    max-width: 140px;
+    padding: 0 25px !important;
+  }
+  .menu-header .tablet-menu .block-menu {
+    -ms-flex-align: end;
+        align-items: end;
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  .menu-header .tablet-menu .scheme-and-howtoget {
+    -ms-flex-align: end;
+        align-items: end;
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  .menu-header .center-line {
+    width: 80%;
+    z-index: 1;
+    height: 1px;
+    display: block;
+    position: absolute;
+    background: #fff;
+    top: 390px;
+  }
+  .menu-header .links-block {
+    position: absolute;
+    top: 335px !important;
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  .menu-header .links-block a {
+    padding: 0 11px;
+    max-width: 140px;
+  }
+  .search-header {
+    width: 100%;
+  }
+  .search-header .block-search {
+    width: 89%;
+    -ms-flex-align: end;
+        align-items: end;
+    margin: 0 auto;
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  .search-header .block-search p {
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+  .search-header .block-search form {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+  .search-header .block-search form .magnifier {
+    right: 45px;
+    position: absolute;
+  }
+  .search-header .block-search form .magnifier svg {
+    opacity: 1;
+    margin-top: 8px;
+  }
+  .search-header .block-search form input {
+    width: 100%;
+    height: 34px;
+    border: 2px solid #fff;
+  }
+  .search-header .block-search form input[type="text"] {
+    padding-left: 20px;
   }
 }
 #main-slider {
