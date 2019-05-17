@@ -3,6 +3,7 @@ body {
 }
 body.locked {
   overflow: hidden;
+  position: relative;
 }
 a {
   cursor: pointer;
@@ -98,8 +99,11 @@ header .container .links-block {
       justify-content: space-around;
 }
 header .container .links-block a {
-  padding: 0 10px;
+  margin: 0 10px;
   white-space: nowrap;
+}
+header .container .links-block a.select {
+  border-bottom: 2px solid #fab900;
 }
 header .container .links-block a.active {
   color: #fff;
@@ -463,6 +467,11 @@ header .container .search-and-burger .menu-icon.search-active .dot {
       align-items: center;
   -ms-flex-pack: center;
       justify-content: center;
+}
+.menu-header.active:after {
+  top: 230px;
+  bottom: unset;
+  position: fixed;
 }
 .menu-header p.operation-mode {
   top: 7px;
