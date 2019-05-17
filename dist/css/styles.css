@@ -810,7 +810,7 @@ header .container .search-and-burger .menu-icon.search-active .dot {
   }
   .menu-header:after {
     bottom: unset;
-    margin-top: 73px;
+    top: 190px;
     position: fixed;
   }
   .menu-header .tablet-menu {
