@@ -32,6 +32,7 @@ $(document).ready(function() {
         } else {
           $('.main-logo img').attr('src', logoClassic);
         }
+        $('.under-header').toggleClass('active');
         $('header').toggleClass('active');
         $('.instagram').toggleClass('active');
         $('.facebook').toggleClass('active');
@@ -52,7 +53,6 @@ $(document).ready(function() {
         $('.background-search').toggleClass('active');
       }
     } else {
-      console.log('Pidor');
       $(this).toggleClass('clicked');
       if (!$('.search-header').hasClass('active')) {
         var logoClassic = './dist/img/svg/header/main_logo.svg';
@@ -94,6 +94,7 @@ $(document).ready(function() {
       if ($('.main-logo img').attr('src') == './dist/img/svg/header/main_logo.svg') {
         $('.main-logo img').attr('src', logoWhite);
       }
+      $('.under-header').addClass('active');
       $('header').addClass('active');
       $('.instagram').addClass('active');
       $('.facebook').addClass('active');
@@ -142,6 +143,7 @@ $(document).ready(function() {
       } else {
         $('.main-logo img').attr('src', logoClassic);
       }
+      $('.under-header').removeClass('active');
       $('header').toggleClass('active');
       $('.instagram').toggleClass('active');
       $('.facebook').toggleClass('active');

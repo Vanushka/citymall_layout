@@ -1,4 +1,6 @@
 @media screen and (max-device-width: 1170px)
+  .under-header
+    height: 60px
   header
     height: 60px
     .container
@@ -13,6 +15,12 @@
         margin-right: 48px
         flex-direction: row-reverse
   .menu-header
+    &.active
+      top: 62px
+    &:after
+      bottom: unset
+      margin-top: 73px
+      position: fixed
     .tablet-menu
       top: 0
       width: 100%
@@ -98,6 +106,7 @@
       .scheme, .how-to-get
         display: none !important
   .search-header
+    top: 61px
     .block-search
       p
         font-size: 32px

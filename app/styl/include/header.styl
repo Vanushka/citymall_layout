@@ -1,3 +1,9 @@
+.under-header
+  width: 100%
+  height: 110px
+  display: none
+  &.active
+    display: block
 header
   width: 100%
   height: 110px
@@ -5,8 +11,11 @@ header
   transition: .3s
   border-bottom: 1px solid $white
   &.active
+    top: 0
+    z-index: 3
     transition: .3s
     background: $red
+    position: fixed
   .container
     width: 100%
     margin: 0 auto
@@ -332,8 +341,10 @@ header
     bottom: -15px
     left: 0px
   &.active
+    top: 111px
     display: flex
     transition: .3s
+    position: fixed
     align-items: center
     justify-content: center
   p.operation-mode
@@ -491,18 +502,19 @@ header
   opacity: 0.7
   z-index: 2
   display: none
-  position: absolute
+  position: fixed
   background: $black
   &.active
     display: block
 .search-header
+  top: 111px
   width: 100%
   z-index: 3
   height: 135px
   display: none
   transition: .3s
   background: $red
-  position: absolute
+  position: fixed
   &:after
     content: ""
     background: linear-gradient(-35deg, transparent 16px, $red 0), linear-gradient(35deg, transparent 16px, $red 0)
@@ -575,7 +587,7 @@ header
   height: 100%
   z-index: 2
   display: none
-  position: absolute
+  position: fixed
   background: $white
   &.active
     display: block
