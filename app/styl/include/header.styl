@@ -9,13 +9,14 @@ header
   height: 110px
   display: flex
   transition: .3s
-  border-bottom: 1px solid $white
+  border-bottom: 1px solid $light-gray
   &.active
     top: 0
     z-index: 3
     transition: .3s
     background: $red
     position: fixed
+    border-bottom: 1px solid $white
   .container
     width: 100%
     margin: 0 auto
@@ -39,8 +40,10 @@ header
       display: flex
       justify-content: space-around
       a
-        padding: 0 10px
+        margin: 0 10px
         white-space: nowrap
+        &.select
+          border-bottom: 2px solid $yellow
         &.active
           svg
             path
@@ -347,6 +350,10 @@ header
     position: fixed
     align-items: center
     justify-content: center
+    &:after
+      top: 230px
+      bottom: unset
+      position: fixed
   p.operation-mode
     top: 7px
     left: 11px
@@ -554,10 +561,6 @@ header
         border-radius: 20px
         box-sizing: border-box
         border: 1px solid $white
-        // &:hover
-        //   transition: .3s
-        //   border: 1px solid $yellow
-        //   transition: .3s
       input[type="text"]
         color: $white
         font-size: 13px

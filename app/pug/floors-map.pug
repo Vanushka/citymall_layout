@@ -1,0 +1,25 @@
+include include/header.pug
+section.search-block-head
+  form
+    .magnifier
+      img.svg(src="./dist/img/svg/floors-map/magnifier-silver.svg")
+    input(type="text", placeholder="Введите название...")
+section.floors-map
+  .container
+    .actions
+      .levels
+        a.second.active 2 этаж
+        a.first 1 этаж
+      .zoom
+        .plus
+        .minus
+    #floors
+      #map_level_1
+        .canvas
+          include floors/map-level-1.pug
+      #map_level_2.active
+        .canvas
+          include floors/map-level-2.pug
+include include/vendor.pug 
+script(src="./dist/js/floors-map.js")
+include include/footer.pug
