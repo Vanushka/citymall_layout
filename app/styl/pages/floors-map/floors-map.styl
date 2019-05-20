@@ -109,6 +109,33 @@
             height: 3px
             position: absolute
             background: url(../img/svg/floors-map/minus.svg)
+      .legend
+        left: 0
+        bottom: 0
+        z-index: 1
+        margin: 65px
+        display: flex
+        width: 271px
+        height: 422px
+        padding-top: 23px
+        background: $white
+        position: absolute
+        flex-direction: column
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1)
+        .paragraph
+          display: flex
+          font-size: 14px
+          line-height: 26px
+          color: $dark-gray
+          margin-left: 25px
+          margin-bottom: 8px
+          align-items: center
+          font-family: GothamPro
+          img
+            width: 22px
+            height: 22px
+            margin-right: 7px
+
     #floors
       #map_level_1
         top: 35px
@@ -126,7 +153,6 @@
           height: 100%
           position: absolute
           transition: .3s linear
-          transform: translate3d(0px, 11px, 0px) rotate(0deg) scale(1) translateZ(0px)
           svg
             display: block
             width: 100%
@@ -136,7 +162,7 @@
                 fill: $red
                 transition: .3s
       #map_level_2
-        top: 55px
+        top: 0
         width: 100%
         height: 100%
         display: none
@@ -147,15 +173,38 @@
           overflow: hidden
           touch-action: none
         .canvas
+          top: 55px
           width: 100%
           height: 100%
+          cursor: grab
+          touch-action: none
+          user-select: none
           position: absolute
-          transform: translate3d(0px, 11px, 0px) rotate(0deg) scale(1) translateZ(0px)
-          svg
+          transition: .3s linear
+          svg#map_2
             display: block
-            width: 100%
-            path
+            width: 100% !important
+            margin: 0 auto
+            g
               transition: .3s
               &:hover
-                fill: $red
-                transition: .3s
+                polygon
+                  fill: $red
+                  cursor: pointer
+                  transition: .3s
+                g
+                  fill: $white
+                  transition: .3s
+            &.animate
+              transition: .3s linear
+  // svg
+  //   display: block
+  //   width: 100%
+  //   height: 100%
+  //   g
+  //     &:hover
+  //       polygon.cls-3
+  //         fill: $red
+  //       g
+  //         path
+  //           fill: white

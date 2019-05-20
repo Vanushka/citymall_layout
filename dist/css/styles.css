@@ -3350,6 +3350,39 @@ header .container .search-and-burger .menu-icon.search-active .dot {
   position: absolute;
   background: url("../img/svg/floors-map/minus.svg");
 }
+.floors-map .container .actions .legend {
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  margin: 65px;
+  display: -ms-flexbox;
+  display: flex;
+  width: 271px;
+  height: 422px;
+  padding-top: 23px;
+  background: #fff;
+  position: absolute;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  box-shadow: 0px 5px 20px rgba(0,0,0,0.1);
+}
+.floors-map .container .actions .legend .paragraph {
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  line-height: 26px;
+  color: #484848;
+  margin-left: 25px;
+  margin-bottom: 8px;
+  -ms-flex-align: center;
+      align-items: center;
+  font-family: GothamPro;
+}
+.floors-map .container .actions .legend .paragraph img {
+  width: 22px;
+  height: 22px;
+  margin-right: 7px;
+}
 .floors-map .container #floors #map_level_1 {
   top: 35px;
   width: 100%;
@@ -3369,7 +3402,6 @@ header .container .search-and-burger .menu-icon.search-active .dot {
   height: 100%;
   position: absolute;
   transition: 0.3s linear;
-  transform: translate3d(0px, 11px, 0px) rotate(0deg) scale(1) translateZ(0px);
 }
 .floors-map .container #floors #map_level_1 .canvas svg {
   display: block;
@@ -3383,7 +3415,7 @@ header .container .search-and-burger .menu-icon.search-active .dot {
   transition: 0.3s;
 }
 .floors-map .container #floors #map_level_2 {
-  top: 55px;
+  top: 0;
   width: 100%;
   height: 100%;
   display: none;
@@ -3397,21 +3429,39 @@ header .container .search-and-burger .menu-icon.search-active .dot {
       touch-action: none;
 }
 .floors-map .container #floors #map_level_2 .canvas {
+  top: 55px;
   width: 100%;
   height: 100%;
+  cursor: -webkit-grab;
+  cursor: grab;
+  -ms-touch-action: none;
+      touch-action: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   position: absolute;
-  transform: translate3d(0px, 11px, 0px) rotate(0deg) scale(1) translateZ(0px);
+  transition: 0.3s linear;
 }
-.floors-map .container #floors #map_level_2 .canvas svg {
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 {
   display: block;
-  width: 100%;
+  width: 100% !important;
+  margin: 0 auto;
 }
-.floors-map .container #floors #map_level_2 .canvas svg path {
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 g {
   transition: 0.3s;
 }
-.floors-map .container #floors #map_level_2 .canvas svg path:hover {
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 g:hover polygon {
   fill: #f6120d;
+  cursor: pointer;
   transition: 0.3s;
+}
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 g:hover g {
+  fill: #fff;
+  transition: 0.3s;
+}
+.floors-map .container #floors #map_level_2 .canvas svg#map_2.animate {
+  transition: 0.3s linear;
 }
 footer {
   width: 90%;

@@ -13,12 +13,25 @@ section.floors-map
       .zoom
         .plus
         .minus
+      .legend
+        .paragraph <img src="./dist/img/svg/floors-map/stairs.svg"> Лестница
+        .paragraph <img src="./dist/img/svg/floors-map/travolator.svg"> Травалатор
+        .paragraph <img src="./dist/img/svg/floors-map/escalator.svg"> Эскалатор
+        .paragraph <img src="./dist/img/svg/floors-map/parking.svg"> Парковка
+        .paragraph <img src="./dist/img/svg/floors-map/toilets.svg"> Туалеты
+        .paragraph <img src="./dist/img/svg/floors-map/rink.svg"> Каток
+        .paragraph <img src="./dist/img/svg/floors-map/food_court.svg"> Ресторанный дворик
+        .paragraph <img src="./dist/img/svg/floors-map/information.svg"> Информационная стойка
+        .paragraph <img src="./dist/img/svg/floors-map/mother_and_child_room.svg"> Комната матери и ребенка
+        .paragraph <img src="./dist/img/svg/floors-map/disabled_toilet.svg"> Туалет для инвалидов
+        .paragraph <img src="./dist/img/svg/floors-map/elevator.svg"> Лифт
+        .paragraph <img src="./dist/img/svg/floors-map/ATMs.svg"> Банкоматы
     #floors
       #map_level_1
-        .canvas
+        .canvas(style="transform: scale(1);")
           include floors/map-level-1.pug
       #map_level_2.active
-        .canvas
+        .canvas(style="transform: scale(1);")
           include floors/map-level-2.pug
 include include/vendor.pug 
 script(src="./dist/js/floors-map.js")
