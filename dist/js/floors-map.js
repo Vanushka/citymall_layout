@@ -109,7 +109,6 @@
     }
   });
 
-
   var active = false;
   var currentX;
   var currentY;
@@ -118,8 +117,8 @@
   var xOffset = 0;
   var yOffset = 0;
 
-  var dragItem = document.querySelector("#map_1");
-  var container = document.querySelector("#map_level_1");
+  var dragItem = document.querySelector("#map_2");
+  var container = document.querySelector("#map_level_2");
 
   function draggble() {
     container.addEventListener("touchstart", dragStart, false);
@@ -131,6 +130,7 @@
     container.addEventListener("mousemove", drag, false);
 
     function dragStart(e) {
+      console.log(e);
       if (e.type === "touchstart") {
         initialX = e.touches[0].clientX - xOffset;
         initialY = e.touches[0].clientY - yOffset;
@@ -172,4 +172,7 @@
       el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
     }
   };
+  
+  draggble();
+
 });
