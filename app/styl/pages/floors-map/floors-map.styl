@@ -1,36 +1,90 @@
 .search-block-head
   width: 91%
   margin: 40px auto
-  form
-    display: flex
-    margin-left: 35px
-    .magnifier
-      display: block
-      position: absolute
-      svg
-        width: 13.66px
-        margin-top: 13px
-        margin-left: 19px
+  .container
+    form
+      display: flex
+      margin-left: 25px
+      .input
+        .magnifier
+          display: block
+          position: absolute
+          svg
+            width: 13.66px
+            margin-top: 13px
+            margin-left: 19px
+            position: absolute
+            path
+              fill: $dark-gray
+        input
+          width: 973px
+          height: 40px
+          outline: none
+          transition: .3s
+          background: none
+          border-radius: 20px
+          box-sizing: border-box
+          border: 1px solid $silver
+        input[type="text"]
+          color: $dark-gray
+          font-size: 13px
+          padding-left: 40px
+        ::placeholder
+          transition: .3s
+          opacity: 0.6
+          color: $silver
+      select
+        display: none
+      .custom-select
+        width: 324px
+        height: 40px
+        margin-left: 35px
+        padding-left: 22px
+        padding-top: 1px
+        font-size: 13px
+        line-height: 35px
+        color: $dark-gray
+        position: relative
+        font-family: GothamPro
+        border: 2px solid $dark-gray
+        box-sizing: border-box
+        border-radius: 20px
+        &:after
+          content: ""
+          top: 17px
+          width: 9px
+          height: 5px
+          right: 20px
+          position: absolute
+          transition: transform .3s ease-out
+          background: url(../img/svg/arrow-select.svg)
+        &.active
+          &:after
+            transform: rotate(180deg)
+            transition: transform .3s ease-out
+        &.disabled
+          opacity: 0.3
+          pointer-events: none
+      .select-items
+        color: $dark-gray
+        margin-left: 24px
+        font-family: GothamPro
+        font-style: normal
+        font-weight: 300
+        margin-top: 20px
+        font-size: 16px
+        line-height: 16px
+        margin-right: 16px
         position: absolute
-        path
-          fill: $dark-gray
-    input
-      width: 973px
-      height: 40px
-      outline: none
-      transition: .3s
-      background: none
-      border-radius: 20px
-      box-sizing: border-box
-      border: 1px solid $silver
-    input[type="text"]
-      color: $silver
-      font-size: 13px
-      padding-left: 40px
-    ::placeholder
-      transition: .3s
-      opacity: 0.6
-      color: $silver
+        z-index: 1
+      .select-selected
+        color $dark-gray
+        font-family: GothamPro
+      .select-items div
+        color: $dark-gray
+        font-family: GothamPro
+      .select-hide
+        display: none
 .floors-map
   width: 91%
   height: 830px
@@ -177,6 +231,7 @@
           width: 100%
           height: 100%
           cursor: grab
+          display: flex
           touch-action: none
           user-select: none
           position: absolute
@@ -185,26 +240,87 @@
             display: block
             width: 100% !important
             margin: 0 auto
-            g
-              transition: .3s
-              &:hover
-                polygon
-                  fill: $red
+            .svg-legend-hover
+              polygon, rect, path, circle
+                cursor: pointer
+                transition: .3s
+              g
+                polygon, rect, path, circle
                   cursor: pointer
                   transition: .3s
-                g
-                  fill: $white
+              .svg-legend-element
+                polygon, rect, path, circle
+                  cursor: pointer
                   transition: .3s
+              &:hover
+                polygon, rect, path, circle
+                  fill: $red
+                  transition: .3s
+                g
+                  polygon, rect, path, circle
+                    fill: $red
+                    transition: .3s
+                .svg-legend-element
+                  polygon, rect, path, circle
+                    cursor: pointer
+                    fill: $white
+                    transition: .3s
+            .svg-hover
+              polygon, rect, path
+                cursor: pointer
+                transition: .3s
+              g
+                polygon, rect, path
+                  cursor: pointer
+                  transition: .3s
+              .svg-hover-text
+                polygon, rect, path
+                  cursor: pointer
+                  transition: .3s
+              &:hover
+                polygon, rect, path
+                  fill: $red
+                  transition: .3s
+                g
+                  polygon, rect, path
+                    fill: $red
+                    transition: .3s
+                .svg-hover-text
+                  polygon, rect, path
+                    cursor: pointer
+                    fill: $white
+                    transition: .3s
+            // .svg-hover
+            //   polygon
+            //     cursor: pointer
+            //     transition: .3s
+            //   &:hover
+            //     polygon, rect, path
+            //       fill: $red
+            //       transition: .3s
+            //     g
+            //       cursor: pointer
+            //       fill: $white
+            //       transition: .3s
             &.animate
               transition: .3s linear
-  // svg
-  //   display: block
-  //   width: 100%
-  //   height: 100%
-  //   g
-  //     &:hover
-  //       polygon.cls-3
-  //         fill: $red
-  //       g
-  //         path
-  //           fill: white
+    .popup-map-info
+      z-index: 2
+      display: none
+      width: 330px
+      height: 381px
+      background: $white
+      position: absolute
+      margin: 0 auto
+      left: 0
+      right: 0
+      svg
+        left: 0
+        right: 0
+        margin: 0 auto
+        margin-top: 40px
+      .category
+        font-size: 12px
+        line-height: 22px
+        font-family: GothamPro
+        color: $pale-gray

@@ -1,9 +1,49 @@
 include include/header.pug
 section.search-block-head
-  form
-    .magnifier
-      img.svg(src="./dist/img/svg/floors-map/magnifier-silver.svg")
-    input(type="text", placeholder="Введите название...")
+  .container
+    form
+      .input
+        .magnifier
+          img.svg(src="./dist/img/svg/floors-map/magnifier-silver.svg")
+        input(type="text", placeholder="Введите название...")
+      .custom-select#category
+          select
+            option Все
+            option Все
+            option Товары для дома
+            option Аксесуары и бижутерия
+            option Верхняя одежда
+            option Детские товары
+            option Женская одежда
+            option Мужская одежда
+            option Кожгалантерея, сумки, чемоданы
+            option Красота и здоровье
+            option Нижнее бельё и колготки
+            option Продукты питания
+            option Спортивные товары
+            option Товары для животных
+            option Цветы, подарки, кондитерские изделия
+            option Электроника и бытовая техника
+            option Ювелирные украшения
+      .custom-select.disabled#shops
+          select
+            option Список магазинов
+            option Список магазинов
+            option Окей
+            option М.Видео
+            option Familia
+            option Kari
+            option Mothercafe
+            option Sinsay
+            option Obi
+            option Детский мир
+            option H&amp;M
+            option Спортмастер гипер
+            option #791
+            option Modis
+            option Befree
+            option Читай город
+            option CiteMarilou
 section.floors-map
   .container
     .actions
@@ -33,6 +73,10 @@ section.floors-map
       #map_level_2.active
         .canvas(style="transform: scale(1);")
           include floors/map-level-2.pug
+    .popup-map-info
+      img.svg(src="./dist/img/svg/floors-map/logos/m.video.svg")
+      .category Бытовая техника
 include include/vendor.pug 
 script(src="./dist/js/floors-map.js")
+script(src="./dist/js/custom-select.js")
 include include/footer.pug

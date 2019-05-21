@@ -3202,25 +3202,25 @@ header .container .search-and-burger .menu-icon.search-active .dot {
   width: 91%;
   margin: 40px auto;
 }
-.search-block-head form {
+.search-block-head .container form {
   display: -ms-flexbox;
   display: flex;
-  margin-left: 35px;
+  margin-left: 25px;
 }
-.search-block-head form .magnifier {
+.search-block-head .container form .input .magnifier {
   display: block;
   position: absolute;
 }
-.search-block-head form .magnifier svg {
+.search-block-head .container form .input .magnifier svg {
   width: 13.66px;
   margin-top: 13px;
   margin-left: 19px;
   position: absolute;
 }
-.search-block-head form .magnifier svg path {
+.search-block-head .container form .input .magnifier svg path {
   fill: #484848;
 }
-.search-block-head form input {
+.search-block-head .container form .input input {
   width: 973px;
   height: 40px;
   outline: none;
@@ -3230,25 +3230,86 @@ header .container .search-and-burger .menu-icon.search-active .dot {
   box-sizing: border-box;
   border: 1px solid #a4a4a4;
 }
-.search-block-head form input[type="text"] {
-  color: #a4a4a4;
+.search-block-head .container form .input input[type="text"] {
+  color: #484848;
   font-size: 13px;
   padding-left: 40px;
 }
-.search-block-head form ::-webkit-input-placeholder {
+.search-block-head .container form .input ::-webkit-input-placeholder {
   transition: 0.3s;
   opacity: 0.6;
   color: #a4a4a4;
 }
-.search-block-head form :-ms-input-placeholder {
+.search-block-head .container form .input :-ms-input-placeholder {
   transition: 0.3s;
   opacity: 0.6;
   color: #a4a4a4;
 }
-.search-block-head form ::placeholder {
+.search-block-head .container form .input ::placeholder {
   transition: 0.3s;
   opacity: 0.6;
   color: #a4a4a4;
+}
+.search-block-head .container form select {
+  display: none;
+}
+.search-block-head .container form .custom-select {
+  width: 324px;
+  height: 40px;
+  margin-left: 35px;
+  padding-left: 22px;
+  padding-top: 1px;
+  font-size: 13px;
+  line-height: 35px;
+  color: #484848;
+  position: relative;
+  font-family: GothamPro;
+  border: 2px solid #484848;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+.search-block-head .container form .custom-select:after {
+  content: "";
+  top: 17px;
+  width: 9px;
+  height: 5px;
+  right: 20px;
+  position: absolute;
+  transition: transform 0.3s ease-out;
+  background: url("../img/svg/arrow-select.svg");
+}
+.search-block-head .container form .custom-select.active:after {
+  -ms-transform: rotate(180deg);
+      transform: rotate(180deg);
+  transition: transform 0.3s ease-out;
+}
+.search-block-head .container form .custom-select.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+.search-block-head .container form .select-items {
+  color: #484848;
+  margin-left: 24px;
+  font-family: GothamPro;
+  font-style: normal;
+  font-weight: 300;
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 16px;
+  margin-right: 16px;
+  position: absolute;
+  z-index: 1;
+}
+.search-block-head .container form .select-selected {
+  color: #484848;
+  font-family: GothamPro;
+}
+.search-block-head .container form .select-items div {
+  color: #484848;
+  font-family: GothamPro;
+}
+.search-block-head .container form .select-hide {
+  display: none;
 }
 .floors-map {
   width: 91%;
@@ -3434,6 +3495,8 @@ header .container .search-and-burger .menu-icon.search-active .dot {
   height: 100%;
   cursor: -webkit-grab;
   cursor: grab;
+  display: -ms-flexbox;
+  display: flex;
   -ms-touch-action: none;
       touch-action: none;
   -webkit-user-select: none;
@@ -3448,20 +3511,111 @@ header .container .search-and-burger .menu-icon.search-active .dot {
   width: 100% !important;
   margin: 0 auto;
 }
-.floors-map .container #floors #map_level_2 .canvas svg#map_2 g {
-  transition: 0.3s;
-}
-.floors-map .container #floors #map_level_2 .canvas svg#map_2 g:hover polygon {
-  fill: #f6120d;
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-legend-hover polygon,
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-legend-hover rect,
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-legend-hover path,
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-legend-hover circle {
   cursor: pointer;
   transition: 0.3s;
 }
-.floors-map .container #floors #map_level_2 .canvas svg#map_2 g:hover g {
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-legend-hover g polygon,
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-legend-hover g rect,
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-legend-hover g path,
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-legend-hover g circle {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-legend-hover .svg-legend-element polygon,
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-legend-hover .svg-legend-element rect,
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-legend-hover .svg-legend-element path,
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-legend-hover .svg-legend-element circle {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-legend-hover:hover polygon,
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-legend-hover:hover rect,
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-legend-hover:hover path,
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-legend-hover:hover circle {
+  fill: #f6120d;
+  transition: 0.3s;
+}
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-legend-hover:hover g polygon,
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-legend-hover:hover g rect,
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-legend-hover:hover g path,
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-legend-hover:hover g circle {
+  fill: #f6120d;
+  transition: 0.3s;
+}
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-legend-hover:hover .svg-legend-element polygon,
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-legend-hover:hover .svg-legend-element rect,
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-legend-hover:hover .svg-legend-element path,
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-legend-hover:hover .svg-legend-element circle {
+  cursor: pointer;
+  fill: #fff;
+  transition: 0.3s;
+}
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-hover polygon,
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-hover rect,
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-hover path {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-hover g polygon,
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-hover g rect,
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-hover g path {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-hover .svg-hover-text polygon,
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-hover .svg-hover-text rect,
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-hover .svg-hover-text path {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-hover:hover polygon,
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-hover:hover rect,
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-hover:hover path {
+  fill: #f6120d;
+  transition: 0.3s;
+}
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-hover:hover g polygon,
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-hover:hover g rect,
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-hover:hover g path {
+  fill: #f6120d;
+  transition: 0.3s;
+}
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-hover:hover .svg-hover-text polygon,
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-hover:hover .svg-hover-text rect,
+.floors-map .container #floors #map_level_2 .canvas svg#map_2 .svg-hover:hover .svg-hover-text path {
+  cursor: pointer;
   fill: #fff;
   transition: 0.3s;
 }
 .floors-map .container #floors #map_level_2 .canvas svg#map_2.animate {
   transition: 0.3s linear;
+}
+.floors-map .container .popup-map-info {
+  z-index: 2;
+  display: none;
+  width: 330px;
+  height: 381px;
+  background: #fff;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+.floors-map .container .popup-map-info svg {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+.floors-map .container .popup-map-info .category {
+  font-size: 12px;
+  line-height: 22px;
+  font-family: GothamPro;
+  color: #a0a0a0;
 }
 footer {
   width: 90%;
