@@ -38,6 +38,7 @@
       .custom-select
         width: 324px
         height: 40px
+        cursor: pointer
         margin-left: 35px
         padding-left: 22px
         padding-top: 1px
@@ -59,30 +60,51 @@
           transition: transform .3s ease-out
           background: url(../img/svg/arrow-select.svg)
         &.active
+          border: 2px solid $white
           &:after
+            z-index: 2
             transform: rotate(180deg)
             transition: transform .3s ease-out
         &.disabled
           opacity: 0.3
           pointer-events: none
       .select-items
+        z-index: 1
+        width: 324px
+        padding-top: 5px
+        max-height: 500px
         color: $dark-gray
-        margin-left: 24px
+        background: $white
         font-family: GothamPro
         font-style: normal
         font-weight: 300
-        margin-top: 20px
+        margin-left: -24px
+        margin-top: -38px
         font-size: 16px
         line-height: 16px
         margin-right: 16px
         position: absolute
-        z-index: 1
+        font-size: 13px
+        line-height: 35px
+        color: $dark-gray
+        position: relative
+        overflow: scroll
+        border-radius: 20px
+        font-family: GothamPro
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.196303)
       .select-selected
         color $dark-gray
         font-family: GothamPro
       .select-items div
+        cursor: pointer
+        transition: .3s
         color: $dark-gray
         font-family: GothamPro
+        padding-left: 24px
+        &:hover
+          color: $dark-gray
+          transition: .3s
+          background: $light-yellow
       .select-hide
         display: none
 .floors-map
@@ -111,15 +133,21 @@
           height: 55px
           width: 270px
           display: flex
+          transition: .3s
           color: $dark-gray
           margin-bottom: 25px
           background: $white
           align-items: center
           justify-content: center
           box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1)
+          &:hover
+            color: $yellow
+            transition: .3s
           &.active
             color: white
             background: $yellow
+            &:hover
+              color: $white
       .zoom
         right: 0
         bottom: 0
@@ -203,18 +231,225 @@
           overflow: hidden
           touch-action: none
         .canvas
+          left: 0
+          right: 0
+          top: 55px
           width: 100%
           height: 100%
+          cursor: grab
+          display: flex
+          margin: 0 auto
+          touch-action: none
+          user-select: none
           position: absolute
-          transition: .3s linear
-          svg
+          &.animate
+            transition: .3s linear
+          svg#map_1
             display: block
-            width: 100%
-            path
-              transition: .3s
-              &:hover
-                fill: $red
+            width: 100% !important
+            margin: 0 auto
+            .svg-legend-hover
+              polygon, rect, path, circle
+                cursor: pointer
                 transition: .3s
+              g
+                polygon, rect, path, circle
+                  cursor: pointer
+                  transition: .3s
+              .svg-legend-element
+                polygon, rect, path, circle
+                  cursor: pointer
+                  transition: .3s
+              &:hover
+                polygon, rect, path, circle
+                  fill: $red
+                  transition: .3s
+                g
+                  polygon, rect, path, circle
+                    fill: $red
+                    transition: .3s
+                .svg-legend-element
+                  polygon, rect, path, circle
+                    cursor: pointer
+                    fill: $white
+                    transition: .3s
+            .svg-hover-a
+              polygon, rect, path
+                cursor: pointer
+                transition: .3s
+              polygon, rect, path
+                cursor: pointer
+                transition: .3s
+              .svg-hover-element
+                g
+                  polygon, rect, path
+                    cursor: pointer
+                    transition: .3s
+                  .svg-hover-letter, .svg-hover-poligon
+                    cursor: pointer
+                    transition: .3s
+              &:hover
+                polygon, rect, path
+                  fill: $orange
+                  transition: .3s
+                .svg-hover-element
+                  g
+                    polygon, rect, path, circle
+                      cursor: pointer
+                      fill: $white
+                      transition: .3s
+                  .svg-hover-letter
+                    fill: $orange
+                    transition: .3s
+                  .svg-hover-poligon
+                    fill: $orange
+                    transition: .3s
+                  polygon, rect, path, circle
+                    cursor: pointer
+                    fill: $white
+                    transition: .3s
+            .svg-hover-b
+              polygon, rect, path
+                cursor: pointer
+                transition: .3s
+              polygon, rect, path
+                cursor: pointer
+                transition: .3s
+              .svg-hover-element
+                g
+                  polygon, rect, path
+                    cursor: pointer
+                    transition: .3s
+                  .svg-hover-letter, .svg-hover-poligon
+                    cursor: pointer
+                    transition: .3s
+              &:hover
+                polygon, rect, path
+                  fill: $blue
+                  transition: .3s
+                .svg-hover-element
+                  g
+                    polygon, rect, path, circle
+                      cursor: pointer
+                      fill: $white
+                      transition: .3s
+                  .svg-hover-letter
+                    fill: $blue
+                    transition: .3s
+                  .svg-hover-poligon
+                    fill: $light-blue
+                    transition: .3s
+                  polygon, rect, path, circle
+                    cursor: pointer
+                    fill: $white
+                    transition: .3s
+            .svg-hover-c
+              polygon, rect, path
+                cursor: pointer
+                transition: .3s
+              polygon, rect, path
+                cursor: pointer
+                transition: .3s
+              .svg-hover-element
+                g
+                  polygon, rect, path
+                    cursor: pointer
+                    transition: .3s
+                  .svg-hover-letter, .svg-hover-poligon
+                    cursor: pointer
+                    transition: .3s
+              &:hover
+                polygon, rect, path
+                  fill: $violet
+                  transition: .3s
+                .svg-hover-element
+                  g
+                    polygon, rect, path, circle
+                      cursor: pointer
+                      fill: $white
+                      transition: .3s
+                  .svg-hover-letter
+                    fill: $violet
+                    transition: .3s
+                  .svg-hover-poligon
+                    fill: $light-violet
+                    transition: .3s
+                  polygon, rect, path
+                    cursor: pointer
+                    fill: $white
+                    transition: .3s
+            .svg-hover-d
+              polygon, rect, path
+                cursor: pointer
+                transition: .3s
+              polygon, rect, path
+                cursor: pointer
+                transition: .3s
+              .svg-hover-element
+                g
+                  polygon, rect, path
+                    cursor: pointer
+                    transition: .3s
+                  .svg-hover-letter, .svg-hover-poligon
+                    cursor: pointer
+                    transition: .3s
+              &:hover
+                polygon, rect, path
+                  fill: $light-green
+                  transition: .3s
+                .svg-hover-element
+                  g
+                    polygon, rect, path, circle
+                      cursor: pointer
+                      fill: $white
+                      transition: .3s
+                  .svg-hover-letter
+                    fill: $light-green
+                    transition: .3s
+                  .svg-hover-poligon
+                    fill: $super-light-green
+                    transition: .3s
+                  polygon, rect, path, circle
+                    cursor: pointer
+                    fill: $white
+                    transition: .3s
+            .svg-hover-e
+              polygon, rect, path
+                cursor: pointer
+                transition: .3s
+              polygon, rect, path
+                cursor: pointer
+                transition: .3s
+              .svg-hover-element
+                g
+                  polygon, rect, path
+                    cursor: pointer
+                    transition: .3s
+                  .svg-hover-letter, .svg-hover-poligon
+                    cursor: pointer
+                    transition: .3s
+              &:hover
+                polygon, rect, path
+                  fill: $light-red
+                  transition: .3s
+                .svg-hover-element
+                  g
+                    polygon, rect, path, circle
+                      cursor: pointer
+                      fill: $white
+                      transition: .3s
+                  .svg-hover-letter
+                    fill: $light-red
+                    transition: .3s
+                  .svg-hover-poligon
+                    fill: $super-light-red
+                    transition: .3s
+                  polygon, rect, path, circle
+                    cursor: pointer
+                    fill: $white
+                    transition: .3s
+            &.animate
+              transition: .3s linear
       #map_level_2
         top: 0
         width: 100%
@@ -227,15 +462,19 @@
           overflow: hidden
           touch-action: none
         .canvas
+          left: 0
+          right: 0
           top: 55px
           width: 100%
           height: 100%
           cursor: grab
           display: flex
+          margin: 0 auto
           touch-action: none
           user-select: none
           position: absolute
-          transition: .3s linear
+          &.animate
+            transition: .3s linear
           svg#map_2
             display: block
             width: 100% !important
@@ -290,20 +529,6 @@
                     cursor: pointer
                     fill: $white
                     transition: .3s
-            // .svg-hover
-            //   polygon
-            //     cursor: pointer
-            //     transition: .3s
-            //   &:hover
-            //     polygon, rect, path
-            //       fill: $red
-            //       transition: .3s
-            //     g
-            //       cursor: pointer
-            //       fill: $white
-            //       transition: .3s
-            &.animate
-              transition: .3s linear
     .popup-map-info
       z-index: 2
       display: none

@@ -9,7 +9,6 @@ section.search-block-head
       .custom-select#category
           select
             option Все
-            option Все
             option Товары для дома
             option Аксесуары и бижутерия
             option Верхняя одежда
@@ -27,7 +26,6 @@ section.search-block-head
             option Ювелирные украшения
       .custom-select.disabled#shops
           select
-            option Список магазинов
             option Список магазинов
             option Окей
             option М.Видео
@@ -67,11 +65,11 @@ section.floors-map
         .paragraph <img src="./dist/img/svg/floors-map/elevator.svg"> Лифт
         .paragraph <img src="./dist/img/svg/floors-map/ATMs.svg"> Банкоматы
     #floors
-      #map_level_1
-        .canvas(style="transform: scale(1);")
+      #map_level_1 
+        .canvas(style="position: absolute; transform: translate3d(0px, 0px, 0px) scale(1); width: 1175px; height: 757px;")
           include floors/map-level-1.pug
       #map_level_2.active
-        .canvas(style="transform: scale(1);")
+        .canvas(style="position: absolute; transform: translate3d(0px, 0px, 0px) scale(1); width: 997px; height: 682px;")
           include floors/map-level-2.pug
     .popup-map-info
       img.svg(src="./dist/img/svg/floors-map/logos/m.video.svg")

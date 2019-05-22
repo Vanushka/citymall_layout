@@ -4,10 +4,9 @@
       $('.second').removeClass('active');
       $('#map_level_1').addClass('active');
       $('#map_level_2').removeClass('active');
-      $('#map_level_2 .canvas').css('transform', 'scale(1)');
-      $('#map_2').css('transform', 'translate3d(0px, 0px, 0px)');
-      dragItem = document.querySelector("#map_1");
+      $('#map_level_2 .canvas').css('transform', 'translate3d(0px, 0px, 0px) scale(1)');
       container = document.querySelector("#map_level_1");
+      dragItem = document.getElementsByClassName('canvas');
       draggble();
       active = false;
       currentX = undefined;
@@ -22,10 +21,9 @@
       $('.second').addClass('active');
       $('#map_level_1').removeClass('active');
       $('#map_level_2').addClass('active');
-      $('#map_level_1 .canvas').css('transform', 'scale(1)');
-      $('#map_1').css('transform', 'translate3d(0px, 0px, 0px)');
-      dragItem = document.querySelector("#map_2");
+      $('#map_level_1 .canvas').css('transform', 'translate3d(0px, 0px, 0px) scale(1)');
       container = document.querySelector("#map_level_2");
+      dragItem = document.getElementsByClassName('canvas');
       draggble();
       active = false;
       currentX = undefined;
@@ -42,37 +40,61 @@
     if ($(map_level_1).css('display') == 'block') {
       var canvas = $(map_level_1).children()[0];
       var scaleInfo = $(canvas)[0].attributes[1].value;
-      scaleInfo = scaleInfo.match(/scale\(([^&][0-9]*[.,]?[0-9]*)\)/m, '')[1];
+      var width = parseFloat(scaleInfo.match(/width\:( [0-9]*[0-9]*?[0-9])*/, '')[1]);
+      var height = parseFloat(scaleInfo.match(/height\:( [0-9]*[0-9]*?[0-9])*/, '')[1]);
+      var translate3d_1 = parseFloat(scaleInfo.match(/translate3d\((\-?[0-9]*)px, (\-?[0-9]*)px, ([0-9]*)px\)*/, '')[1]);
+      var translate3d_2 = parseFloat(scaleInfo.match(/translate3d\((\-?[0-9]*)px, (\-?[0-9]*)px, ([0-9]*)px\)*/, '')[2]);
+      scaleInfo = scaleInfo.match(/scale\(([^&][0-9]*[.,]?[0-9]*)\)/, '')[1];
       scaleInfo = parseFloat(scaleInfo);
       var scale = scaleInfo + 0.3;
-    	$(canvas).css('transform', 'scale(' + scale + ')');
+      $(canvas).addClass('animate');
+    	$(canvas).css({'transform':'translate3d(' + translate3d_1 + 'px, ' + translate3d_2 + 'px, 0px) scale(' + scale + ')','width': ''+ width + 'px;', 'height': '' + height + 'px;'});
+      setTimeout(function() {
+        $(canvas).removeClass('animate');
+      }, 300);
     } else if ($(map_level_2).css('display') == 'block') {
       var canvas = $(map_level_2).children()[0];
       var scaleInfo = $(canvas)[0].attributes[1].value;
-      scaleInfo = scaleInfo.match(/scale\(([^&][0-9]*[.,]?[0-9]*)\)/m, '')[1];
+      var width = parseFloat(scaleInfo.match(/width\:( [0-9]*[0-9]*?[0-9])*/, '')[1]);
+      var height = parseFloat(scaleInfo.match(/height\:( [0-9]*[0-9]*?[0-9])*/, '')[1]);
+      var translate3d_1 = parseFloat(scaleInfo.match(/translate3d\((\-?[0-9]*)px, (\-?[0-9]*)px, ([0-9]*)px\)*/, '')[1]);
+      var translate3d_2 = parseFloat(scaleInfo.match(/translate3d\((\-?[0-9]*)px, (\-?[0-9]*)px, ([0-9]*)px\)*/, '')[2]);
+      scaleInfo = scaleInfo.match(/scale\(([^&][0-9]*[.,]?[0-9]*)\)/, '')[1];
+      console.log(width);
       scaleInfo = parseFloat(scaleInfo);
       var scale = scaleInfo + 0.3;
-    	$(canvas).css('transform', 'scale(' + scale + ')');
+      $(canvas).addClass('animate');
+    	$(canvas).css({'transform':'translate3d(' + translate3d_1 + 'px, ' + translate3d_2 + 'px, 0px) scale(' + scale + ')','width': ''+ width + 'px;', 'height': '' + height + 'px;'});
+      setTimeout(function() {
+        $(canvas).removeClass('animate');
+      }, 300);
     }
   });
+
   $('.minus').click(function() {
     var map_level_1 = $('#map_level_1');
     var map_level_2 = $('#map_level_2');
     if ($(map_level_1).css('display') == 'block') {
       var canvas = $(map_level_1).children()[0];
-      var map_1 = $(canvas).children()[0];
       var scaleInfo = $(canvas)[0].attributes[1].value;
-      scaleInfo = scaleInfo.match(/scale\(([^&][0-9]*[.,]?[0-9]*)\)/m, '')[1];
+      var width = parseFloat(scaleInfo.match(/width\:( [0-9]*[0-9]*?[0-9])*/, '')[1]);
+      var height = parseFloat(scaleInfo.match(/height\:( [0-9]*[0-9]*?[0-9])*/, '')[1]);
+      var translate3d_1 = parseFloat(scaleInfo.match(/translate3d\((\-?[0-9]*)px, (\-?[0-9]*)px, ([0-9]*)px\)*/, '')[1]);
+      var translate3d_2 = parseFloat(scaleInfo.match(/translate3d\((\-?[0-9]*)px, (\-?[0-9]*)px, ([0-9]*)px\)*/, '')[2]);
+      scaleInfo = scaleInfo.match(/scale\(([^&][0-9]*[.,]?[0-9]*)\)/, '')[1];
       scaleInfo = parseFloat(scaleInfo);
       var scale = scaleInfo - 0.3;
-      if (scale > 1) {
-        $(canvas).css('transform', 'scale(' + scale + ')');
-      } else if (scale > 0.4) {
-        $(map_1).addClass('animate');
-        $(canvas).css('transform', 'scale(' + scale + ')');
-        $(map_1).css('transform', 'translate3d(0px, 0px, 0px)');
+      if (scaleInfo > 1) {
+        $(canvas).addClass('animate');
+        $(canvas).css({'transform':'translate3d(' + translate3d_1 + 'px, ' + translate3d_2 + 'px, 0px) scale(' + scale + ')','width': ''+ width + 'px;', 'height': '' + height + 'px;'});
         setTimeout(function() {
-          $(map_1).removeClass('animate');
+          $(canvas).removeClass('animate');
+        }, 300);
+      } else if (scale > 0.4) {
+        $(canvas).addClass('animate');
+        $(canvas).css({'transform':'translate3d(' + translate3d_1 + 'px, ' + translate3d_2 + 'px, 0px) scale(' + scale + ')','width': ''+ width + 'px;', 'height': '' + height + 'px;'});
+        setTimeout(function() {
+          $(canvas).removeClass('animate');
         }, 300);
         active = false;
         currentX = undefined;
@@ -84,19 +106,25 @@
       }
     } else if ($(map_level_2).css('display') == 'block') {
       var canvas = $(map_level_2).children()[0];
-      var map_2 = $(canvas).children()[0];
       var scaleInfo = $(canvas)[0].attributes[1].value;
-      scaleInfo = scaleInfo.match(/scale\(([^&][0-9]*[.,]?[0-9]*)\)/m, '')[1];
+      var width = parseFloat(scaleInfo.match(/width\:( [0-9]*[0-9]*?[0-9])*/, '')[1]);
+      var height = parseFloat(scaleInfo.match(/height\:( [0-9]*[0-9]*?[0-9])*/, '')[1]);
+      var translate3d_1 = parseFloat(scaleInfo.match(/translate3d\((\-?[0-9]*)px, (\-?[0-9]*)px, ([0-9]*)px\)*/, '')[1]);
+      var translate3d_2 = parseFloat(scaleInfo.match(/translate3d\((\-?[0-9]*)px, (\-?[0-9]*)px, ([0-9]*)px\)*/, '')[2]);
+      scaleInfo = scaleInfo.match(/scale\(([^&][0-9]*[.,]?[0-9]*)\)/, '')[1];
       scaleInfo = parseFloat(scaleInfo);
       var scale = scaleInfo - 0.3;
-      if (scale > 1) {
-        $(canvas).css('transform', 'scale(' + scale + ')');
-      } else if (scale > 0.4) {
-        $(map_2).addClass('animate');
-        $(canvas).css('transform', 'scale(' + scale + ')');
-        $(map_2).css('transform', 'translate3d(0px, 0px, 0px)');
+      if (scaleInfo > 1) {
+        $(canvas).addClass('animate');
+        $(canvas).css({'transform':'translate3d(' + translate3d_1 + 'px, ' + translate3d_2 + 'px, 0px) scale(' + scale + ')','width': ''+ width + 'px;', 'height': '' + height + 'px;'});
         setTimeout(function() {
-          $(map_2).removeClass('animate');
+          $(canvas).removeClass('animate');
+        }, 300);
+      } else if (scale > 0.4) {
+        $(canvas).addClass('animate');
+        $(canvas).css({'transform':'translate3d(' + translate3d_1 + 'px, ' + translate3d_2 + 'px, 0px) scale(' + scale + ')','width': ''+ width + 'px;', 'height': '' + height + 'px;'});
+        setTimeout(function() {
+          $(canvas).removeClass('animate');
         }, 300);
         active = false;
         currentX = undefined;
@@ -117,8 +145,9 @@
   var xOffset = 0;
   var yOffset = 0;
 
-  var dragItem = document.querySelector("#map_2");
+
   var container = document.querySelector("#map_level_2");
+  var dragItem = container.children[0];
 
   function draggble() {
     container.addEventListener("touchstart", dragStart, false);
@@ -130,7 +159,6 @@
     container.addEventListener("mousemove", drag, false);
 
     function dragStart(e) {
-      console.log(e);
       if (e.type === "touchstart") {
         initialX = e.touches[0].clientX - xOffset;
         initialY = e.touches[0].clientY - yOffset;
@@ -138,9 +166,7 @@
         initialX = e.clientX - xOffset;
         initialY = e.clientY - yOffset;
       }
-      if (e.target === dragItem) {
         active = true;
-      }
     }
 
     function dragEnd(e) {
@@ -169,10 +195,22 @@
     }
 
     function setTranslate(xPos, yPos, el) {
-      el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
+      if (el.length == undefined) {
+        elScale = el.style.cssText;
+      } else if (el.length == 2) {
+        if (document.getElementById('map_level_1').className == 'active') {
+          el = el[0]
+          elScale = el.style.cssText;
+        } else if (document.getElementById('map_level_2').className == 'active') {
+          el = el[1]
+          elScale = el.style.cssText;
+        }
+      }
+      var elScale = parseFloat(elScale.match(/scale\(([^&][0-9]*[.,]?[0-9]*)\)/, '')[1]);
+      el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0) scale(" + elScale + ")";
     }
   };
-  
+
   draggble();
 
 });
