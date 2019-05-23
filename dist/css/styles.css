@@ -3494,7 +3494,7 @@ header .container .search-and-burger .menu-icon.search-active .dot {
 .floors-map .container #floors #map_level_1 .canvas {
   left: 0;
   right: 0;
-  top: 55px;
+  top: 5px;
   width: 100%;
   height: 100%;
   cursor: -webkit-grab;
@@ -3517,6 +3517,43 @@ header .container .search-and-burger .menu-icon.search-active .dot {
   display: block;
   width: 100% !important;
   margin: 0 auto;
+}
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover polygon,
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover rect,
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover path {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover g polygon,
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover g rect,
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover g path {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover .svg-hover-text polygon,
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover .svg-hover-text rect,
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover .svg-hover-text path {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover:hover polygon,
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover:hover rect,
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover:hover path {
+  fill: #f6120d;
+  transition: 0.3s;
+}
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover:hover g polygon,
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover:hover g rect,
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover:hover g path {
+  fill: #f6120d;
+  transition: 0.3s;
+}
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover:hover .svg-hover-text polygon,
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover:hover .svg-hover-text rect,
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover:hover .svg-hover-text path {
+  cursor: pointer;
+  fill: #fff;
+  transition: 0.3s;
 }
 .floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-legend-hover polygon,
 .floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-legend-hover rect,
@@ -3821,6 +3858,59 @@ header .container .search-and-burger .menu-icon.search-active .dot {
 .floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover-e:hover .svg-hover-element rect,
 .floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover-e:hover .svg-hover-element path,
 .floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover-e:hover .svg-hover-element circle {
+  cursor: pointer;
+  fill: #fff;
+  transition: 0.3s;
+}
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover-f polygon,
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover-f rect,
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover-f path {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover-f polygon,
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover-f rect,
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover-f path {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover-f .svg-hover-element g polygon,
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover-f .svg-hover-element g rect,
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover-f .svg-hover-element g path {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover-f .svg-hover-element g .svg-hover-letter,
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover-f .svg-hover-element g .svg-hover-poligon {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover-f:hover polygon,
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover-f:hover rect,
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover-f:hover path {
+  fill: #ffd60c;
+  transition: 0.3s;
+}
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover-f:hover .svg-hover-element g polygon,
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover-f:hover .svg-hover-element g rect,
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover-f:hover .svg-hover-element g path,
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover-f:hover .svg-hover-element g circle {
+  cursor: pointer;
+  fill: #fff;
+  transition: 0.3s;
+}
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover-f:hover .svg-hover-element .svg-hover-letter {
+  fill: #ffd60c;
+  transition: 0.3s;
+}
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover-f:hover .svg-hover-element .svg-hover-poligon {
+  fill: #ffd60c;
+  transition: 0.3s;
+}
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover-f:hover .svg-hover-element polygon,
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover-f:hover .svg-hover-element rect,
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover-f:hover .svg-hover-element path,
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover-f:hover .svg-hover-element circle {
   cursor: pointer;
   fill: #fff;
   transition: 0.3s;

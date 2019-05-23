@@ -84,14 +84,16 @@
       scaleInfo = scaleInfo.match(/scale\(([^&][0-9]*[.,]?[0-9]*)\)/, '')[1];
       scaleInfo = parseFloat(scaleInfo);
       var scale = scaleInfo - 0.3;
-      if (scaleInfo > 1) {
+      if (scaleInfo > 1.3) {
         $(canvas).addClass('animate');
         $(canvas).css({'transform':'translate3d(' + translate3d_1 + 'px, ' + translate3d_2 + 'px, 0px) scale(' + scale + ')','width': ''+ width + 'px;', 'height': '' + height + 'px;'});
         setTimeout(function() {
           $(canvas).removeClass('animate');
         }, 300);
-      } else if (scale > 0.4) {
+      } else if (scale == 1) {
         $(canvas).addClass('animate');
+        translate3d_1 = 0;
+        translate3d_2 = 0;
         $(canvas).css({'transform':'translate3d(' + translate3d_1 + 'px, ' + translate3d_2 + 'px, 0px) scale(' + scale + ')','width': ''+ width + 'px;', 'height': '' + height + 'px;'});
         setTimeout(function() {
           $(canvas).removeClass('animate');
@@ -114,14 +116,17 @@
       scaleInfo = scaleInfo.match(/scale\(([^&][0-9]*[.,]?[0-9]*)\)/, '')[1];
       scaleInfo = parseFloat(scaleInfo);
       var scale = scaleInfo - 0.3;
-      if (scaleInfo > 1) {
+      if (scaleInfo > 1.3) {
         $(canvas).addClass('animate');
         $(canvas).css({'transform':'translate3d(' + translate3d_1 + 'px, ' + translate3d_2 + 'px, 0px) scale(' + scale + ')','width': ''+ width + 'px;', 'height': '' + height + 'px;'});
         setTimeout(function() {
           $(canvas).removeClass('animate');
         }, 300);
-      } else if (scale > 0.4) {
+        console.log(scale);
+      } else if (scale == 1) {
         $(canvas).addClass('animate');
+        translate3d_1 = 0;
+        translate3d_2 = 0;
         $(canvas).css({'transform':'translate3d(' + translate3d_1 + 'px, ' + translate3d_2 + 'px, 0px) scale(' + scale + ')','width': ''+ width + 'px;', 'height': '' + height + 'px;'});
         setTimeout(function() {
           $(canvas).removeClass('animate');
