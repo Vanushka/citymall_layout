@@ -65,15 +65,28 @@ section.floors-map
         .paragraph <img src="./dist/img/svg/floors-map/elevator.svg"> Лифт
         .paragraph <img src="./dist/img/svg/floors-map/ATMs.svg"> Банкоматы
     #floors
-      #map_level_1 
-        .canvas(style="position: absolute; transform: translate3d(0px, 0px, 0px) scale(1); width: 1175px; height: 757px;")
+      #map_level_1
+        .canvas(style="position: absolute; transform: translate3d(0px, 0px, 0px) scale(1); width: 1000px; height: 700px;")
           include floors/map-level-1.pug
       #map_level_2.active
-        .canvas(style="position: absolute; transform: translate3d(0px, 0px, 0px) scale(1); width: 997px; height: 682px;")
+        .canvas(style="position: absolute; transform: translate3d(0px, 0px, 0px) scale(1); width: 1000px; height: 700px;")
           include floors/map-level-2.pug
-    .popup-map-info
-      img.svg(src="./dist/img/svg/floors-map/logos/m.video.svg")
-      .category Бытовая техника
+    //- .popup-map-info(style="transform: translateX(595.254px) translateY(105px) translateZ(0px);")
+    //-   img.svg(src="./dist/img/svg/floors-map/logos/m.video.svg")
+    //-   .category Бытовая техника
+    //-   p INCITY
+    //-   .horizontal-line
+    //-   .info
+    //-     .clock <img src="./dist/img/svg/floors-map/clock-circular.svg" class="svg"> 10:00 - 22:00
+    //-     a.phone <img src="./dist/img/svg/floors-map/phone-receiver.svg" class="svg"> + 7 (3462) 31 04 03
+    //-     a.global <img src="./dist/img/svg/floors-map/global.svg" class="svg"> incity.ru
+    //-     .social-links
+    //-       a.instagram
+    //-         img.svg(src="./dist/img/svg/footer/instagram-silver.svg")
+    //-       a.facebook
+    //-         img.svg(src="./dist/img/svg/footer/facebook-silver.svg")
+    //-       a.vk
+    //-         img.svg(src="./dist/img/svg/footer/vk-silver.svg")
 include include/vendor.pug 
 script(src="./dist/js/floors-map.js")
 script(src="./dist/js/custom-select.js")

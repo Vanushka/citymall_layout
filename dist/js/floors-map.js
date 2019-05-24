@@ -1,4 +1,7 @@
   $(document).ready(function() {
+    if ($( window ).width() <= 1440) {
+      $('#map_2').css({'width': 500, 'height': 600});
+    }
     $('.levels a.first').click(function() {
       $('.first').addClass('active');
       $('.second').removeClass('active');
@@ -42,8 +45,8 @@
       var scaleInfo = $(canvas)[0].attributes[1].value;
       var width = parseFloat(scaleInfo.match(/width\:( [0-9]*[0-9]*?[0-9])*/, '')[1]);
       var height = parseFloat(scaleInfo.match(/height\:( [0-9]*[0-9]*?[0-9])*/, '')[1]);
-      var translate3d_1 = parseFloat(scaleInfo.match(/translate3d\((\-?[0-9]*)px, (\-?[0-9]*)px, ([0-9]*)px\)*/, '')[1]);
-      var translate3d_2 = parseFloat(scaleInfo.match(/translate3d\((\-?[0-9]*)px, (\-?[0-9]*)px, ([0-9]*)px\)*/, '')[2]);
+      var translate3d_1 = parseFloat(scaleInfo.match(/translate3d\((\-?[0-9]*[\.,]?[0-9]*)px, (\-?[0-9]*[\.,]?[0-9]*)px, ([0-9]*[\.,]?[0-9]*)px\)*/, '')[1]);
+      var translate3d_2 = parseFloat(scaleInfo.match(/translate3d\((\-?[0-9]*[\.,]?[0-9]*)px, (\-?[0-9]*[\.,]?[0-9]*)px, ([0-9]*[\.,]?[0-9]*)px\)*/, '')[2]);
       scaleInfo = scaleInfo.match(/scale\(([^&][0-9]*[.,]?[0-9]*)\)/, '')[1];
       scaleInfo = parseFloat(scaleInfo);
       var scale = scaleInfo + 0.3;
@@ -57,8 +60,9 @@
       var scaleInfo = $(canvas)[0].attributes[1].value;
       var width = parseFloat(scaleInfo.match(/width\:( [0-9]*[0-9]*?[0-9])*/, '')[1]);
       var height = parseFloat(scaleInfo.match(/height\:( [0-9]*[0-9]*?[0-9])*/, '')[1]);
-      var translate3d_1 = parseFloat(scaleInfo.match(/translate3d\((\-?[0-9]*)px, (\-?[0-9]*)px, ([0-9]*)px\)*/, '')[1]);
-      var translate3d_2 = parseFloat(scaleInfo.match(/translate3d\((\-?[0-9]*)px, (\-?[0-9]*)px, ([0-9]*)px\)*/, '')[2]);
+      var translate3d_1 = parseFloat(scaleInfo.match(/translate3d\((\-?[0-9]*[\.,]?[0-9]*)px, (\-?[0-9]*[\.,]?[0-9]*)px, ([0-9]*[\.,]?[0-9]*)px\)*/, '')[1]);
+      console.log(translate3d_1);
+      var translate3d_2 = parseFloat(scaleInfo.match(/translate3d\((\-?[0-9]*[\.,]?[0-9]*)px, (\-?[0-9]*[\.,]?[0-9]*)px, ([0-9]*[\.,]?[0-9]*)px\)*/, '')[2]);
       scaleInfo = scaleInfo.match(/scale\(([^&][0-9]*[.,]?[0-9]*)\)/, '')[1];
       console.log(width);
       scaleInfo = parseFloat(scaleInfo);
@@ -79,8 +83,8 @@
       var scaleInfo = $(canvas)[0].attributes[1].value;
       var width = parseFloat(scaleInfo.match(/width\:( [0-9]*[0-9]*?[0-9])*/, '')[1]);
       var height = parseFloat(scaleInfo.match(/height\:( [0-9]*[0-9]*?[0-9])*/, '')[1]);
-      var translate3d_1 = parseFloat(scaleInfo.match(/translate3d\((\-?[0-9]*)px, (\-?[0-9]*)px, ([0-9]*)px\)*/, '')[1]);
-      var translate3d_2 = parseFloat(scaleInfo.match(/translate3d\((\-?[0-9]*)px, (\-?[0-9]*)px, ([0-9]*)px\)*/, '')[2]);
+      var translate3d_1 = parseFloat(scaleInfo.match(/translate3d\((\-?[0-9]*[\.,]?[0-9]*)px, (\-?[0-9]*[\.,]?[0-9]*)px, ([0-9]*[\.,]?[0-9]*)px\)*/, '')[1]);
+      var translate3d_2 = parseFloat(scaleInfo.match(/translate3d\((\-?[0-9]*[\.,]?[0-9]*)px, (\-?[0-9]*[\.,]?[0-9]*)px, ([0-9]*[\.,]?[0-9]*)px\)*/, '')[2]);
       scaleInfo = scaleInfo.match(/scale\(([^&][0-9]*[.,]?[0-9]*)\)/, '')[1];
       scaleInfo = parseFloat(scaleInfo);
       var scale = scaleInfo - 0.3;
@@ -111,8 +115,8 @@
       var scaleInfo = $(canvas)[0].attributes[1].value;
       var width = parseFloat(scaleInfo.match(/width\:( [0-9]*[0-9]*?[0-9])*/, '')[1]);
       var height = parseFloat(scaleInfo.match(/height\:( [0-9]*[0-9]*?[0-9])*/, '')[1]);
-      var translate3d_1 = parseFloat(scaleInfo.match(/translate3d\((\-?[0-9]*)px, (\-?[0-9]*)px, ([0-9]*)px\)*/, '')[1]);
-      var translate3d_2 = parseFloat(scaleInfo.match(/translate3d\((\-?[0-9]*)px, (\-?[0-9]*)px, ([0-9]*)px\)*/, '')[2]);
+      var translate3d_1 = parseFloat(scaleInfo.match(/translate3d\((\-?[0-9]*[\.,]?[0-9]*)px, (\-?[0-9]*[\.,]?[0-9]*)px, ([0-9]*[\.,]?[0-9]*)px\)*/, '')[1]);
+      var translate3d_2 = parseFloat(scaleInfo.match(/translate3d\((\-?[0-9]*[\.,]?[0-9]*)px, (\-?[0-9]*[\.,]?[0-9]*)px, ([0-9]*[\.,]?[0-9]*)px\)*/, '')[2]);
       scaleInfo = scaleInfo.match(/scale\(([^&][0-9]*[.,]?[0-9]*)\)/, '')[1];
       scaleInfo = parseFloat(scaleInfo);
       var scale = scaleInfo - 0.3;
@@ -218,4 +222,12 @@
 
   draggble();
 
+  $('svg#map_2').click(function(e) {
+    var id = e.target.id;
+    console.log(id);
+    var x = $('#'+id).offset().top;
+    var y = $('#'+id).offset().left;
+    console.log(x, y);
+    $('.popup-map-info').offset({top: x - 390, left: y - 130});
+  });
 });

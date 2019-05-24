@@ -6,6 +6,8 @@
       display: flex
       margin-left: 25px
       .input
+        width: 90%
+        max-width: 1100px
         .magnifier
           display: block
           position: absolute
@@ -17,7 +19,7 @@
             path
               fill: $dark-gray
         input
-          width: 973px
+          width: 100%
           height: 40px
           outline: none
           transition: .3s
@@ -36,7 +38,8 @@
       select
         display: none
       .custom-select
-        width: 324px
+        width: 100%
+        max-width: 324px
         height: 40px
         cursor: pointer
         margin-left: 35px
@@ -105,6 +108,10 @@
           color: $dark-gray
           transition: .3s
           background: $light-yellow
+      .same-as-selected
+        color: $dark-gray
+        transition: .3s
+        background: $light-yellow
       .select-hide
         display: none
 .floors-map
@@ -249,6 +256,8 @@
             width: 100% !important
             margin: 0 auto
             .svg-hover
+              cursor: pointer
+              transition: .3s
               polygon, rect, path
                 cursor: pointer
                 transition: .3s
@@ -260,7 +269,12 @@
                 polygon, rect, path
                   cursor: pointer
                   transition: .3s
+              .svg-hover-text-special
+                cursor: pointer
+                transition: .3s
               &:hover
+                fill: $red
+                transition: .3s
                 polygon, rect, path
                   fill: $red
                   transition: .3s
@@ -273,6 +287,10 @@
                     cursor: pointer
                     fill: $white
                     transition: .3s
+                .svg-hover-text-special
+                  cursor: pointer
+                  fill: $white
+                  transition: .3s
             .svg-legend-hover
               polygon, rect, path, circle
                 cursor: pointer
@@ -590,22 +608,126 @@
                     fill: $white
                     transition: .3s
     .popup-map-info
+      top: 0
+      left: 0
       z-index: 2
-      display: none
+      display: block
       width: 330px
       height: 381px
+      text-align: center
       background: $white
       position: absolute
-      margin: 0 auto
-      left: 0
-      right: 0
+      &:after
+        content: ""
+        display: block
+        width: 0
+        border-top: 21px solid #fff
+        border-right: 15px solid transparent
+        border-left: 15px solid transparent
+        position: absolute
+        top: 100%
+        right: 50%
+        -webkit-transform: translateX(50%)
+        -ms-transform: translateX(50%)
+        transform: translateX(50%)
+        z-index: 2
       svg
         left: 0
         right: 0
         margin: 0 auto
-        margin-top: 40px
+        margin-top: 35px
+        margin-bottom: 13px
       .category
         font-size: 12px
         line-height: 22px
+        margin-bottom: 10px
         font-family: GothamPro
         color: $pale-gray
+      p
+        margin: 0
+        color: $dark-gray
+        font-family: GothamPro
+        font-size: 15px
+        line-height: 26px
+        margin-bottom: 18px
+      .horizontal-line
+        width: 100%
+        height: 1px
+        background: $light-gray
+      .info
+        margin: 32px 40px
+        display: flex
+        flex-direction: column
+        .clock
+          display: flex
+          color: $dark-gray
+          align-items: center
+          font-family: GothamPro
+          font-size: 15px
+          line-height: 26px
+          margin-bottom: 15px
+          svg
+            width: 18px
+            height: 18px
+            margin: 0
+            margin-right: 15px
+        a.phone
+          display: flex
+          color: $dark-gray
+          align-items: center
+          font-family: GothamPro
+          font-size: 14px
+          line-height: 26px
+          text-align: left
+          margin-bottom: 15px
+          svg
+            margin: 0
+            width: 18px
+            height: 18px
+            transition: .3s
+            margin-right: 15px
+        a.global
+          display: flex
+          color: $links-blue
+          align-items: center
+          font-family: GothamPro
+          font-size: 14px
+          line-height: 26px
+          text-align: left
+          margin-bottom: 15px
+          svg
+            margin: 0
+            width: 18px
+            height: 18px
+            transition: .3s
+            margin-right: 15px
+        .social-links
+          width: 95px
+          height: 20px
+          display: flex
+          align-items: center
+          justify-content: space-between
+          .instagram
+            width: 21.78px
+            height: 21.78px
+            svg
+              margin-top: 0
+              margin-bottom: 0
+              path
+                transition: .3s
+          .facebook
+            width: 12px
+            height: 23px
+            svg
+              margin-top: 0
+              margin-bottom: 0
+              path
+                transition: .3s
+          .vk
+            width: 25.5px
+            height: 25.5px
+            svg
+              margin-top: 0
+              margin-bottom: 0
+              path
+                transition: .3s

@@ -76,6 +76,17 @@ function closeAllSelect(elmnt) {
     shops.classList.remove('disabled');
   } else {
     shops.classList.add("disabled");
+    var childrenShops = shops.children[2].children;
+    for (var i = 0; i < childrenShops.length; i++) {
+      childrenShops[0].className = "same-as-selected";
+    	childrenShops[i].classList.remove("same-as-selected");
+    }
+    for (var sh = 0; sh < shops.children[2].children.length; sh++) {
+      var selectedShop = shops.children[2].children[sh];
+      if (selectedShop.className == "same-as-selected") {
+        selectedShop.click();
+      }
+    }
   }
 }
 

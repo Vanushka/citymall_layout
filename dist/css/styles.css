@@ -3207,6 +3207,10 @@ header .container .search-and-burger .menu-icon.search-active .dot {
   display: flex;
   margin-left: 25px;
 }
+.search-block-head .container form .input {
+  width: 90%;
+  max-width: 1100px;
+}
 .search-block-head .container form .input .magnifier {
   display: block;
   position: absolute;
@@ -3221,7 +3225,7 @@ header .container .search-and-burger .menu-icon.search-active .dot {
   fill: #484848;
 }
 .search-block-head .container form .input input {
-  width: 973px;
+  width: 100%;
   height: 40px;
   outline: none;
   transition: 0.3s;
@@ -3254,7 +3258,8 @@ header .container .search-and-burger .menu-icon.search-active .dot {
   display: none;
 }
 .search-block-head .container form .custom-select {
-  width: 324px;
+  width: 100%;
+  max-width: 324px;
   height: 40px;
   cursor: pointer;
   margin-left: 35px;
@@ -3329,6 +3334,11 @@ header .container .search-and-burger .menu-icon.search-active .dot {
   padding-left: 24px;
 }
 .search-block-head .container form .select-items div:hover {
+  color: #484848;
+  transition: 0.3s;
+  background: #ffdf88;
+}
+.search-block-head .container form .same-as-selected {
   color: #484848;
   transition: 0.3s;
   background: #ffdf88;
@@ -3518,6 +3528,10 @@ header .container .search-and-burger .menu-icon.search-active .dot {
   width: 100% !important;
   margin: 0 auto;
 }
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover {
+  cursor: pointer;
+  transition: 0.3s;
+}
 .floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover polygon,
 .floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover rect,
 .floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover path {
@@ -3536,6 +3550,14 @@ header .container .search-and-burger .menu-icon.search-active .dot {
   cursor: pointer;
   transition: 0.3s;
 }
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover .svg-hover-text-special {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover:hover {
+  fill: #f6120d;
+  transition: 0.3s;
+}
 .floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover:hover polygon,
 .floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover:hover rect,
 .floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover:hover path {
@@ -3551,6 +3573,11 @@ header .container .search-and-burger .menu-icon.search-active .dot {
 .floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover:hover .svg-hover-text polygon,
 .floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover:hover .svg-hover-text rect,
 .floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover:hover .svg-hover-text path {
+  cursor: pointer;
+  fill: #fff;
+  transition: 0.3s;
+}
+.floors-map .container #floors #map_level_1 .canvas svg#map_1 .svg-hover:hover .svg-hover-text-special {
   cursor: pointer;
   fill: #fff;
   transition: 0.3s;
@@ -4040,27 +4067,161 @@ header .container .search-and-burger .menu-icon.search-active .dot {
   transition: 0.3s;
 }
 .floors-map .container .popup-map-info {
+  top: 0;
+  left: 0;
   z-index: 2;
-  display: none;
+  display: block;
   width: 330px;
   height: 381px;
+  text-align: center;
   background: #fff;
   position: absolute;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
+}
+.floors-map .container .popup-map-info:after {
+  content: "";
+  display: block;
+  width: 0;
+  border-top: 21px solid #fff;
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  -ms-transform: translateX(50%);
+  transform: translateX(50%);
+  z-index: 2;
 }
 .floors-map .container .popup-map-info svg {
   left: 0;
   right: 0;
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: 35px;
+  margin-bottom: 13px;
 }
 .floors-map .container .popup-map-info .category {
   font-size: 12px;
   line-height: 22px;
+  margin-bottom: 10px;
   font-family: GothamPro;
   color: #a0a0a0;
+}
+.floors-map .container .popup-map-info p {
+  margin: 0;
+  color: #484848;
+  font-family: GothamPro;
+  font-size: 15px;
+  line-height: 26px;
+  margin-bottom: 18px;
+}
+.floors-map .container .popup-map-info .horizontal-line {
+  width: 100%;
+  height: 1px;
+  background: #d8d8d8;
+}
+.floors-map .container .popup-map-info .info {
+  margin: 32px 40px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+.floors-map .container .popup-map-info .info .clock {
+  display: -ms-flexbox;
+  display: flex;
+  color: #484848;
+  -ms-flex-align: center;
+      align-items: center;
+  font-family: GothamPro;
+  font-size: 15px;
+  line-height: 26px;
+  margin-bottom: 15px;
+}
+.floors-map .container .popup-map-info .info .clock svg {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  margin-right: 15px;
+}
+.floors-map .container .popup-map-info .info a.phone {
+  display: -ms-flexbox;
+  display: flex;
+  color: #484848;
+  -ms-flex-align: center;
+      align-items: center;
+  font-family: GothamPro;
+  font-size: 14px;
+  line-height: 26px;
+  text-align: left;
+  margin-bottom: 15px;
+}
+.floors-map .container .popup-map-info .info a.phone svg {
+  margin: 0;
+  width: 18px;
+  height: 18px;
+  transition: 0.3s;
+  margin-right: 15px;
+}
+.floors-map .container .popup-map-info .info a.global {
+  display: -ms-flexbox;
+  display: flex;
+  color: #4a90e2;
+  -ms-flex-align: center;
+      align-items: center;
+  font-family: GothamPro;
+  font-size: 14px;
+  line-height: 26px;
+  text-align: left;
+  margin-bottom: 15px;
+}
+.floors-map .container .popup-map-info .info a.global svg {
+  margin: 0;
+  width: 18px;
+  height: 18px;
+  transition: 0.3s;
+  margin-right: 15px;
+}
+.floors-map .container .popup-map-info .info .social-links {
+  width: 95px;
+  height: 20px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.floors-map .container .popup-map-info .info .social-links .instagram {
+  width: 21.78px;
+  height: 21.78px;
+}
+.floors-map .container .popup-map-info .info .social-links .instagram svg {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.floors-map .container .popup-map-info .info .social-links .instagram svg path {
+  transition: 0.3s;
+}
+.floors-map .container .popup-map-info .info .social-links .facebook {
+  width: 12px;
+  height: 23px;
+}
+.floors-map .container .popup-map-info .info .social-links .facebook svg {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.floors-map .container .popup-map-info .info .social-links .facebook svg path {
+  transition: 0.3s;
+}
+.floors-map .container .popup-map-info .info .social-links .vk {
+  width: 25.5px;
+  height: 25.5px;
+}
+.floors-map .container .popup-map-info .info .social-links .vk svg {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.floors-map .container .popup-map-info .info .social-links .vk svg path {
+  transition: 0.3s;
 }
 footer {
   width: 90%;
